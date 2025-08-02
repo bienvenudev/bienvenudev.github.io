@@ -13,6 +13,17 @@ menuClose.addEventListener("click", () => {
   ulOpening.classList.remove("open");
 });
 
+// Close nav when clicking outside
+document.addEventListener("click", (e) => {
+  if (
+    ulOpening.classList.contains("open") &&
+    !ulOpening.contains(e.target) &&
+    !menuOpen.contains(e.target)
+  ) {
+    ulOpening.classList.remove("open");
+  }
+});
+
 toggleLight.addEventListener("click", () => {
   document.body.classList.remove("dark");
   toggleLight.style.display = "none";

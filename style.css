@@ -269,7 +269,7 @@ body.dark .about-text p {
     right: 0;
     top: 0;
     height: 100vh;
-    width: 40%;
+    width: 50%;
     z-index: 10;
     font-size: 1.3rem;
     backdrop-filter: blur(5px) saturate(180%) brightness(150%) blur(10px);
@@ -445,18 +445,14 @@ h2 {
   text-decoration: underline;
 }
 
-h3,
-h4 {
-  color: var(--clr-text-about);
-  text-decoration: underline 3px double;
+h3 {
+  color: black;
+  font-weight: 900;
+  /* text-decoration: underline 3px; */
 }
 
-.details-container {
-  /* max-width: 700px;
-  margin-inline: auto; */
-  /* display: grid; */
-  /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
-  /* gap: 1rem; */
+body.dark h3 {
+  color: var(--clr-text-about);
 }
 
 .background a,

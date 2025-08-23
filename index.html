@@ -53,11 +53,13 @@
     <header>
       <nav class="primary-nav">
         <div class="wrapper">
-          <h1 class="main-title"><a href="#">Bienvenu</a></h1>
+          <h1 class="main-title">
+            <a href="#" aria-label="Homepage">Bienvenu</a>
+          </h1>
           <ul class="ul-opening">
             <li>
               <!-- Menu Close -->
-              <span class="menu menu-close">
+              <button class="menu menu-close" aria-label="Close menu">
                 <svg
                   viewBox="0 0 1024 1024"
                   width="24"
@@ -78,13 +80,12 @@
                     ></path>
                   </g>
                 </svg>
-              </span>
+              </button>
             </li>
             <li><a href="#About"> About</a></li>
             <li><a href="#Skills"> Skills</a></li>
             <li><a href="#Background"> Background</a></li>
             <li><a href="#Projects"> Projects</a></li>
-            <!-- <li><a href="#"> Contact</a></li> -->
           </ul>
         </div>
 
@@ -113,7 +114,7 @@
         </div>
 
         <!-- Menu Open -->
-        <div class="menu menu-open">
+        <button class="menu menu-open" aria-label="Open menu">
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -135,7 +136,7 @@
               ></path>
             </g>
           </svg>
-        </div>
+        </button>
 
         <!-- Dark Mode -->
         <div class="mode light-toggle">
@@ -174,13 +175,14 @@
       <section id="About">
         <div class="about-grid">
           <div class="about-text">
-            <span class="about-heading">Hi, I'm Bienvenu Cyuzuzo</span>
+            <h2 class="about-heading">Hi, I'm Bienvenu Cyuzuzo</h2>
             <p>
               A software engineering student and web developer from Rwanda. My
               mission is to build inclusive digital solutions that work for
               everyone, regardless of their abilities. Through my focus on
               <a
                 target="_blank"
+                rel="noopener"
                 href="https://www.w3.org/WAI/fundamentals/accessibility-intro/"
               >
                 web accessibility (A11Y)
@@ -193,13 +195,19 @@
             <img
               class="avatar-img"
               src="images/Bienvenu- BW Mugshot.jpg"
-              alt="Bienvenu Mugshot"
+              alt="Bienvenu Portrait"
             />
             <div>
               <ul>
+                <!-- github -->
                 <li>
-                  <span class="sr-only">GitHub (opens in a new tab)</span>
-                  <a href="https://github.com/bienvenudev" class="icon-link">
+                  <a
+                    href="https://github.com/bienvenudev"
+                    class="icon-link"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <span class="sr-only">GitHub (opens in a new tab)</span>
                     <svg
                       width="24px"
                       height="24px"
@@ -249,11 +257,13 @@
 
                 <!-- linkedin -->
                 <li>
-                  <span class="sr-only">Linkedin (opens in a new tab)</span>
                   <a
                     href="https://www.linkedin.com/in/bienvenu-cyuzuzo/"
                     class="icon-link"
+                    target="_blank"
+                    rel="noopener"
                   >
+                    <span class="sr-only">Linkedin (opens in a new tab)</span>
                     <svg
                       fill="currentColor"
                       width="1.5rem"
@@ -283,12 +293,13 @@
 
                 <!-- resume -->
                 <li>
-                  <span class="sr-only">Resume (opens in a new tab)</span>
                   <a
                     href="./resume/Bienvenu_Cyuzuzo_Resume.pdf"
                     class="icon-link"
                     target="_blank"
+                    rel="noopener"
                   >
+                    <span class="sr-only">Resume (opens in a new tab)</span>
                     <svg
                       fill="currentColor"
                       width="1.5rem"
@@ -313,8 +324,15 @@
 
                 <!-- email -->
                 <li>
-                  <span class="sr-only">GitHub (opens in a new tab)</span>
-                  <a href="mailto:cbienvenu007@gmail.com" class="icon-link">
+                  <a
+                    href="mailto:cbienvenu007@gmail.com"
+                    class="icon-link"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <span class="sr-only"
+                      >Email Bienvenu (opens in email client)</span
+                    >
                     <svg
                       fill="currentColor"
                       width="1.5rem"
@@ -740,9 +758,14 @@
                 <span class="date">May 2024 - July 2027</span>
                 <div class="role">BSc. (Hons) Software Engineering</div>
                 <div class="place">
-                  <a target="_blank" href="https://alueducation.com/">
-                    African Leadership University, Rwanda</a
+                  <a
+                    target="_blank"
+                    href="https://alueducation.com/"
+                    rel="noopener"
                   >
+                    African Leadership University, Rwanda
+                    <span class="sr-only">opens in a new tab</span>
+                  </a>
                 </div>
                 <p>
                   A software engineering program in partnership with Holberton
@@ -766,9 +789,14 @@
                 <span class="date">November 2024 - November 2025</span>
                 <div class="role">Software Developer Trainee</div>
                 <div class="place">
-                  <a target="_blank" href="https://www.the-gym.rw/">
-                    The Gym, Rwanda</a
+                  <a
+                    target="_blank"
+                    href="https://www.the-gym.rw/"
+                    rel="noopener"
                   >
+                    The Gym, Rwanda
+                    <span class="sr-only">opens in a new tab</span>
+                  </a>
                 </div>
                 <p>
                   An intensive software development training program focusing on
@@ -790,14 +818,28 @@
           <!-- Projects card grid -->
           <div class="projects-cards">
             <article>
-              <h4><a href="https://drivekgl.com/">DriveKGL</a></h4>
+              <h4>
+                <a href="https://drivekgl.com/" target="_blank" rel="noopener">
+                  DriveKGL
+                  <span class="sr-only">opens in a new tab</span>
+                </a>
+              </h4>
               <p>
                 A car rental website built for a client's business in Rwanda.
               </p>
             </article>
 
             <article>
-              <h4><a href="https://wasemac.netlify.app/">Wasemac</a></h4>
+              <h4>
+                <a
+                  href="https://wasemac.netlify.app/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Wasemac
+                  <span class="sr-only">opens in a new tab</span>
+                </a>
+              </h4>
               <p>
                 A corporate website for a water and sewage solutions company in
                 Rwanda. The site showcases their services, and company
@@ -807,9 +849,14 @@
 
             <article>
               <h4>
-                <a href="https://pulsepediagroup.com/impact1000-africa/"
-                  >Impact1000 Africa</a
+                <a
+                  href="https://pulsepediagroup.com/impact1000-africa/"
+                  target="_blank"
+                  rel="noopener"
                 >
+                  Impact1000 Africa
+                  <span class="sr-only">opens in a new tab</span>
+                </a>
               </h4>
               <p>
                 A promotional website for the Impact 1000 Africa Initiative by
@@ -825,9 +872,15 @@
     <footer>
       <div>
         <ul>
+          <!-- github -->
           <li>
-            <span class="sr-only">GitHub (opens in a new tab)</span>
-            <a href="https://github.com/bienvenudev" class="icon-link">
+            <a
+              href="https://github.com/bienvenudev"
+              class="icon-link"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="sr-only">GitHub (opens in a new tab)</span>
               <svg
                 width="24px"
                 height="24px"
@@ -877,11 +930,13 @@
 
           <!-- linkedin -->
           <li>
-            <span class="sr-only">Linkedin (opens in a new tab)</span>
             <a
               href="https://www.linkedin.com/in/bienvenu-cyuzuzo/"
               class="icon-link"
+              target="_blank"
+              rel="noopener"
             >
+              <span class="sr-only">Linkedin (opens in a new tab)</span>
               <svg
                 fill="currentColor"
                 width="1.5rem"
@@ -911,12 +966,13 @@
 
           <!-- resume -->
           <li>
-            <span class="sr-only">Resume (opens in a new tab)</span>
             <a
               href="./resume/Bienvenu_Cyuzuzo_Resume.pdf"
               class="icon-link"
               target="_blank"
+              rel="noopener"
             >
+              <span class="sr-only">Resume (opens in a new tab)</span>
               <svg
                 fill="currentColor"
                 width="1.5rem"
@@ -941,8 +997,13 @@
 
           <!-- email -->
           <li>
-            <span class="sr-only">GitHub (opens in a new tab)</span>
-            <a href="mailto:cbienvenu007@gmail.com" class="icon-link">
+            <a
+              href="mailto:cbienvenu007@gmail.com"
+              class="icon-link"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="sr-only">Email Bienvenu (opens in a new tab)</span>
               <svg
                 fill="currentColor"
                 width="1.5rem"

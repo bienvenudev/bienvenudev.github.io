@@ -58,7 +58,7 @@ export default function Nav() {
   return (
     <>
       <header className={`nav-header${scrolled ? " nav-scrolled" : ""}`}>
-        <div className="nav-inner wrapper">
+        <div className="nav-inner wrapper justify-between">
           {/* Logo */}
           <Link href="/" className="nav-logo">
             Bienvenu

@@ -63,7 +63,7 @@ export default function RootLayout({
           Skip to main content
         </a>
         <Nav />
-        <main id="main-content">
+        <main id="main-content" className="wrapper">
           {children}
         </main>
         <Footer />

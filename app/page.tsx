@@ -21,29 +21,41 @@ export default function Home() {
   return (
     <>
       {/* ── Hero ──────────────────────────────────────────── */}
-      <section id="About" className="hero-section">
-        <div className="hero-grid">
+      <section
+        id="About"
+        className="min-h-[calc(100svh-64px)] pt-16 flex items-center"
+      >
+        <div className="grid grid-cols-[1fr_auto] gap-16 items-center w-full py-16 max-md:grid-cols-1 max-md:gap-10 max-md:text-center max-md:py-10">
+
           {/* Left: text */}
-          <div className="hero-content">
-            <span className="status-badge">
-              <span className="status-dot" aria-hidden="true" />
+          <div className="flex flex-col gap-5 max-w-[560px] max-md:items-center max-md:order-2 max-md:max-w-full">
+
+            {/* Status badge */}
+            <span className="inline-flex items-center gap-2 text-[0.82rem] font-medium text-[var(--text-muted)] bg-[var(--bg-card)] border border-[var(--border-card)] px-3 py-1.5 rounded-full w-fit tracking-[0.01em]">
+              <span
+                className="w-[7px] h-[7px] rounded-full bg-green-500 shadow-[0_0_6px_#22c55e] shrink-0"
+                aria-hidden="true"
+              />
               Available for work
             </span>
 
-            <h1 className="hero-title">
+            {/* Heading */}
+            <h1 className="text-[clamp(2.6rem,6vw,4.5rem)] font-black tracking-[-0.04em] leading-[1.05] text-[var(--text)]">
               Hi, I&apos;m Bienvenu.<br />
-              <span className="hero-title--accent">Frontend Dev.</span>
+              <span className="text-[var(--accent)]">Frontend Dev.</span>
             </h1>
 
-            <p className="hero-bio">
+            {/* Bio */}
+            <p className="text-[clamp(1rem,1.5vw,1.15rem)] leading-[1.75] text-[var(--text-muted)] max-w-[500px]">
               A software engineering student and web developer from Rwanda,
               building{" "}
-              <span className="text-accent">accessible</span>,
+              <span className="text-[var(--accent)] font-semibold">accessible</span>,
               performant products. Studying at{" "}
               <a
                 href="https://alueducation.com/"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="text-[var(--text)] font-semibold underline underline-offset-[3px] decoration-[var(--border-card)] hover:decoration-[var(--accent)] transition-colors"
               >
                 ALU
               </a>{" "}
@@ -52,6 +64,7 @@ export default function Home() {
                 href="https://www.the-gym.rw/"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="text-[var(--text)] font-semibold underline underline-offset-[3px] decoration-[var(--border-card)] hover:decoration-[var(--accent)] transition-colors"
               >
                 The Gym
               </a>
@@ -62,14 +75,14 @@ export default function Home() {
           </div>
 
           {/* Right: avatar */}
-          <div className="hero-avatar">
-            <div className="avatar-ring">
+          <div className="shrink-0 flex justify-center max-md:order-1">
+            <div className="relative w-[260px] h-[260px] rounded-full overflow-hidden border-2 border-[var(--border-card)] shadow-[0_0_0_8px_var(--accent-dim)] max-md:w-[180px] max-md:h-[180px]">
               <Image
-                src="/images/Bienvenu- BW Mugshot.jpg"
+                src="/images/bienvenu-bw.jpg"
                 alt="Bienvenu Cyuzuzo"
-                width={260}
-                height={260}
-                className="avatar-photo"
+                fill
+                sizes="260px"
+                className="object-cover object-top"
                 priority
               />
             </div>

@@ -11,7 +11,7 @@ const ibmPlex = IBM_Plex_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Bienvenu Cyuzuzo | Frontend Developer",
+  title: "Bienvenu Cyuzuzo | Software Developer",
   description:
     "Portfolio of Bienvenu Cyuzuzo, a software engineering student and web developer from Rwanda, focused on web accessibility (A11Y).",
 };
@@ -63,7 +63,7 @@ export default function RootLayout({
           Skip to main content
         </a>
         <Nav />
-        <main id="main-content" className="wrapper">
+        <main id="main-content">
           {children}
         </main>
         <Footer />

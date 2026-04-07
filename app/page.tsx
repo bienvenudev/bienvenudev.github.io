@@ -207,43 +207,69 @@ export default function Home() {
       </section>
 
       {/* ── Background ────────────────────────────────────── */}
-      <section id="Background" className="bg-section section">
-        <h2>Background</h2>
-        <div className="bg-entries">
+      <section id="Background" className="py-20">
+        <h2 className="text-[clamp(1.6rem,3vw,2rem)] font-extrabold tracking-[-0.02em] text-[var(--text)] mb-8">
+          Background
+        </h2>
+        <div className="flex flex-col gap-4">
+
           {/* Education */}
-          <div className="bg-entry">
-            <span className="bg-label">Education</span>
-            <span className="bg-date">2024 – 2027</span>
-            <h3>BSc. (Hons) Software Engineering</h3>
-            <p className="bg-org">
-              <a href="https://alueducation.com/" target="_blank" rel="noopener noreferrer">
+          <div className="p-6 border border-[var(--border-card)] rounded-2xl bg-[var(--bg-card)] grid grid-cols-[1fr_auto] gap-x-4 gap-y-[0.1rem] items-start max-[520px]:grid-cols-1">
+            <span className="col-[1] text-[0.72rem] font-bold uppercase tracking-[0.08em] text-[var(--accent)]">
+              Education
+            </span>
+            <span className="col-[2] [grid-row:1/3] text-[0.8rem] text-[var(--text-subtle)] whitespace-nowrap self-start max-[520px]:col-[1] max-[520px]:[grid-row:auto]">
+              2024 – 2027
+            </span>
+            <h3 className="col-[1] text-[1.05rem] font-bold tracking-[-0.02em] text-[var(--text)]">
+              BSc. (Hons) Software Engineering
+            </h3>
+            <p className="col-[1] text-sm text-[var(--text-muted)]">
+              <a
+                href="https://alueducation.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold underline underline-offset-[2px] hover:text-[var(--accent)] transition-colors"
+              >
                 African Leadership University
               </a>{" "}
               — Rwanda
             </p>
-            <p>
+            <p className="col-[1/-1] text-[0.9rem] text-[var(--text-muted)] leading-[1.7] mt-3">
               A software engineering programme in partnership with Holberton School,
               focused on practical skills through project-based and peer learning.
             </p>
           </div>
 
           {/* Experience */}
-          <div className="bg-entry">
-            <span className="bg-label">Experience</span>
-            <span className="bg-date">2024 – 2025</span>
-            <h3>Software Developer Trainee</h3>
-            <p className="bg-org">
-              <a href="https://www.the-gym.rw/" target="_blank" rel="noopener noreferrer">
+          <div className="p-6 border border-[var(--border-card)] rounded-2xl bg-[var(--bg-card)] grid grid-cols-[1fr_auto] gap-x-4 gap-y-[0.1rem] items-start max-[520px]:grid-cols-1">
+            <span className="col-[1] text-[0.72rem] font-bold uppercase tracking-[0.08em] text-[var(--accent)]">
+              Experience
+            </span>
+            <span className="col-[2] [grid-row:1/3] text-[0.8rem] text-[var(--text-subtle)] whitespace-nowrap self-start max-[520px]:col-[1] max-[520px]:[grid-row:auto]">
+              2024 – 2025
+            </span>
+            <h3 className="col-[1] text-[1.05rem] font-bold tracking-[-0.02em] text-[var(--text)]">
+              Software Developer Trainee
+            </h3>
+            <p className="col-[1] text-sm text-[var(--text-muted)]">
+              <a
+                href="https://www.the-gym.rw/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold underline underline-offset-[2px] hover:text-[var(--accent)] transition-colors"
+              >
                 The Gym
               </a>{" "}
               — Rwanda
             </p>
-            <p>
+            <p className="col-[1/-1] text-[0.9rem] text-[var(--text-muted)] leading-[1.7] mt-3">
               Intensive training programme with mentorship from international senior
               developers. Selected based on merit; focused on building
               production-quality software through real-world projects.
             </p>
           </div>
+
         </div>
       </section>
     </>

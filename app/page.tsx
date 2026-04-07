@@ -190,11 +190,16 @@ export default function Home() {
       </section>
 
       {/* ── Skills ────────────────────────────────────────── */}
-      <section id="Skills" className="skills-section section">
-        <h2>Skills</h2>
-        <div className="skills-grid">
+      <section id="Skills" className="py-20">
+        <h2 className="text-[clamp(1.6rem,3vw,2rem)] font-extrabold tracking-[-0.02em] text-[var(--text)] mb-6">
+          Skills
+        </h2>
+        <div className="flex flex-wrap gap-[0.6rem]">
           {SKILLS.map((skill) => (
-            <span key={skill} className="skill-pill">
+            <span
+              key={skill}
+              className="text-sm font-medium py-[0.4rem] px-4 rounded-full border border-[var(--border-card)] bg-[var(--bg-card)] text-[var(--text-muted)] tracking-[0.01em] transition-colors duration-200 cursor-default hover:border-[var(--accent)] hover:text-[var(--accent)] hover:bg-[var(--accent-dim)]"
+            >
               {skill}
             </span>
           ))}

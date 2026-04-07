@@ -272,38 +272,6 @@ a:hover { text-decoration: underline; }
 }
 
 
-/* ── Skills Section ─────────────────────────────────────────── */
-.skills-section h2 {
-  font-size: clamp(1.6rem, 3vw, 2rem);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  margin-bottom: 1.5rem;
-}
-
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-}
-
-.skill-pill {
-  font-size: 0.875rem;
-  font-weight: 500;
-  padding: 0.4rem 1rem;
-  border-radius: 999px;
-  border: 1px solid var(--border-card);
-  background: var(--bg-card);
-  color: var(--text-muted);
-  letter-spacing: 0.01em;
-  transition: border-color 0.2s, color 0.2s, background 0.2s;
-  cursor: default;
-}
-.skill-pill:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-  background: var(--accent-dim);
-}
-
 /* ── Background Section ─────────────────────────────────────── */
 .bg-section h2 {
   font-size: clamp(1.6rem, 3vw, 2rem);

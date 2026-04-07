@@ -17,6 +17,36 @@ const SKILLS = [
   "npm",
 ];
 
+const PROJECTS = [
+  {
+    num: "01",
+    name: "DriveKGL",
+    desc: "Car rental website for a Kigali-based client.",
+    tags: ["HTML", "CSS", "JavaScript"],
+    live: "https://drivekgl.com/",
+    slug: "drivekgl",
+    gradient: "linear-gradient(135deg, #1e1b4b 0%, #4c1d95 100%)",
+  },
+  {
+    num: "02",
+    name: "Wasemac",
+    desc: "Corporate website for a water & sewage engineering firm in Rwanda.",
+    tags: ["HTML", "CSS", "JavaScript"],
+    live: "https://wasemacltd.com/",
+    slug: "wasemac",
+    gradient: "linear-gradient(135deg, #042f2e 0%, #0d9488 100%)",
+  },
+  {
+    num: "03",
+    name: "Impact1000 Africa",
+    desc: "Promotional site for an initiative training 1,000 businesses across Africa.",
+    tags: ["HTML", "CSS", "JavaScript"],
+    live: "https://pulsepediagroup.com/impact1000-africa/",
+    slug: "impact1000",
+    gradient: "linear-gradient(135deg, #431407 0%, #c2410c 100%)",
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -91,82 +121,71 @@ export default function Home() {
       </section>
 
       {/* ── Projects ──────────────────────────────────────── */}
-      <section id="Projects" className="projects-section section">
-        <div className="section-header">
-          <h2>Projects</h2>
-          <p className="section-sub">Selected client work</p>
+      <section id="Projects" className="py-20">
+        <div className="mb-10">
+          <h2 className="text-[clamp(1.6rem,3vw,2rem)] font-extrabold tracking-[-0.02em] text-[var(--text)]">
+            Projects
+          </h2>
+          <p className="mt-1 text-[0.95rem] text-[var(--text-muted)]">Selected client work</p>
         </div>
 
-        <div className="project-grid">
-          {/* DriveKGL */}
-          <article className="project-card">
-            <div className="project-visual project-visual--drivekgl">
-              <span className="project-num" aria-hidden="true">01</span>
-            </div>
-            <div className="project-body">
-              <h3>DriveKGL</h3>
-              <p>Car rental website for a Kigali-based client.</p>
-              <div className="project-tags">
-                {["HTML", "CSS", "JavaScript"].map((t) => (
-                  <span key={t} className="project-tag">{t}</span>
-                ))}
+        <div className="grid grid-cols-2 gap-5 max-[700px]:grid-cols-1">
+          {PROJECTS.map(({ num, name, desc, tags, live, slug, gradient }) => (
+            <article
+              key={slug}
+              className="rounded-[20px] overflow-hidden border border-[var(--border-card)] bg-[var(--bg-card)] transition-[transform,box-shadow] duration-[250ms] hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.15)]"
+            >
+              {/* Gradient top */}
+              <div
+                className="h-[180px] relative overflow-hidden"
+                style={{ background: gradient }}
+              >
+                <span
+                  className="text-[5rem] font-black leading-none absolute right-4 -bottom-2 tracking-[-0.04em] tabular-nums pointer-events-none select-none"
+                  style={{ color: "rgba(255,255,255,0.08)" }}
+                  aria-hidden="true"
+                >
+                  {num}
+                </span>
               </div>
-              <div className="project-actions">
-                <a href="https://drivekgl.com/" target="_blank" rel="noopener noreferrer">
-                  Live site ↗
-                </a>
-                <Link href="/projects/drivekgl">Case Study →</Link>
-              </div>
-            </div>
-          </article>
 
-          {/* Wasemac */}
-          <article className="project-card">
-            <div className="project-visual project-visual--wasemac">
-              <span className="project-num" aria-hidden="true">02</span>
-            </div>
-            <div className="project-body">
-              <h3>Wasemac</h3>
-              <p>
-                Corporate website for a water &amp; sewage engineering firm in Rwanda.
-              </p>
-              <div className="project-tags">
-                {["HTML", "CSS", "JavaScript"].map((t) => (
-                  <span key={t} className="project-tag">{t}</span>
-                ))}
-              </div>
-              <div className="project-actions">
-                <a href="https://wasemacltd.com/" target="_blank" rel="noopener noreferrer">
-                  Live site ↗
-                </a>
-                <Link href="/projects/wasemac">Case Study →</Link>
-              </div>
-            </div>
-          </article>
+              {/* Body */}
+              <div className="px-6 pt-5 pb-6 flex flex-col gap-2">
+                <h3 className="text-[1.1rem] font-bold tracking-[-0.02em] text-[var(--text)]">
+                  {name}
+                </h3>
+                <p className="text-[0.9rem] text-[var(--text-muted)] leading-[1.6]">{desc}</p>
 
-          {/* Impact1000 */}
-          <article className="project-card">
-            <div className="project-visual project-visual--impact1000">
-              <span className="project-num" aria-hidden="true">03</span>
-            </div>
-            <div className="project-body">
-              <h3>Impact1000 Africa</h3>
-              <p>
-                Promotional site for an initiative training 1,000 businesses across Africa.
-              </p>
-              <div className="project-tags">
-                {["HTML", "CSS", "JavaScript"].map((t) => (
-                  <span key={t} className="project-tag">{t}</span>
-                ))}
+                <div className="flex flex-wrap gap-[0.4rem] mt-1">
+                  {tags.map((t) => (
+                    <span
+                      key={t}
+                      className="text-[0.72rem] font-medium text-[var(--text-subtle)] bg-[var(--bg-card-hover)] py-[0.15rem] px-2 rounded-full border border-[var(--border)] tracking-[0.02em] uppercase"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex gap-5 mt-2">
+                  <a
+                    href={live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-semibold text-[var(--accent)] no-underline hover:underline"
+                  >
+                    Live site ↗
+                  </a>
+                  <Link
+                    href={`/projects/${slug}`}
+                    className="text-sm font-semibold text-[var(--accent)] no-underline hover:underline"
+                  >
+                    Case Study →
+                  </Link>
+                </div>
               </div>
-              <div className="project-actions">
-                <a href="https://pulsepediagroup.com/impact1000-africa/" target="_blank" rel="noopener noreferrer">
-                  Live site ↗
-                </a>
-                <Link href="/projects/impact1000">Case Study →</Link>
-              </div>
-            </div>
-          </article>
+            </article>
+          ))}
         </div>
       </section>
 

@@ -268,40 +268,6 @@ a:hover { text-decoration: underline; }
 }
 
 
-/* ── Footer ─────────────────────────────────────────────────── */
-footer {
-  padding: 3rem 0 2rem;
-  border-top: 1px solid var(--border);
-}
-
-.footer-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.footer-name {
-  font-weight: 700;
-  font-size: 0.9rem;
-  color: var(--text);
-}
-
-.footer-copy {
-  font-size: 0.8rem;
-  color: var(--text-subtle);
-}
-
-@media (max-width: 560px) {
-  .footer-inner {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1.25rem;
-  }
-}
-
 /* ── Case Study Pages ───────────────────────────────────────── */
 .case-study {
   margin: 7rem auto 5rem;

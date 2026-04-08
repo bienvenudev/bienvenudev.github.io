@@ -214,60 +214,102 @@ export default function Home() {
         <div className="flex flex-col gap-4">
 
           {/* Education */}
-          <div className="p-6 border border-[var(--border-card)] rounded-2xl bg-[var(--bg-card)] grid grid-cols-[1fr_auto] gap-x-4 gap-y-[0.1rem] items-start max-[520px]:grid-cols-1">
-            <span className="col-[1] text-[0.72rem] font-bold uppercase tracking-[0.08em] text-[var(--accent)]">
-              Education
-            </span>
-            <span className="col-[2] [grid-row:1/3] text-[0.8rem] text-[var(--text-subtle)] whitespace-nowrap self-start max-[520px]:col-[1] max-[520px]:[grid-row:auto]">
-              2024 – 2027
-            </span>
-            <h3 className="col-[1] text-[1.05rem] font-bold tracking-[-0.02em] text-[var(--text)]">
-              BSc. (Hons) Software Engineering
-            </h3>
-            <p className="col-[1] text-sm text-[var(--text-muted)]">
-              <a
-                href="https://alueducation.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold underline underline-offset-[2px] hover:text-[var(--accent)] transition-colors"
-              >
-                African Leadership University
-              </a>{" "}
-              — Rwanda
-            </p>
-            <p className="col-[1/-1] text-[0.9rem] text-[var(--text-muted)] leading-[1.7] mt-3">
-              A software engineering programme in partnership with Holberton School,
-              focused on practical skills through project-based and peer learning.
-            </p>
+          <div className="p-6 border border-[var(--border-card)] rounded-2xl bg-[var(--bg-card)] flex gap-4 items-start">
+            {/* Logo badge */}
+            <a
+              href="https://alueducation.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 w-[48px] h-[48px] rounded-lg overflow-hidden flex items-center justify-center transition-opacity hover:opacity-80"
+            >
+              <Image
+                src="/images/alu-logo.png"
+                alt="African Leadership University"
+                width={48}
+                height={48}
+                className="object-contain"
+              />
+            </a>
+
+            {/* Content */}
+            <div className="flex-1 min-w-0">
+              <span className="text-[0.72rem] font-bold uppercase tracking-[0.08em] text-[var(--accent)]">
+                Education
+              </span>
+              <div className="flex items-baseline justify-between gap-4 mt-0.5">
+                <h3 className="text-[1.05rem] font-bold tracking-[-0.02em] text-[var(--text)]">
+                  BSc. (Hons) Software Engineering
+                </h3>
+                <span className="text-[0.8rem] text-[var(--text-subtle)] whitespace-nowrap shrink-0">
+                  2024 – 2027
+                </span>
+              </div>
+              <p className="text-sm text-[var(--text-muted)] mt-0.5">
+                <a
+                  href="https://alueducation.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold underline underline-offset-[2px] hover:text-[var(--accent)] transition-colors"
+                >
+                  African Leadership University
+                </a>{" "}
+                — Rwanda
+              </p>
+              <p className="text-[0.9rem] text-[var(--text-muted)] leading-[1.7] mt-3">
+                A software engineering programme in partnership with Holberton School,
+                focused on practical skills through project-based and peer learning.
+              </p>
+            </div>
           </div>
 
           {/* Experience */}
-          <div className="p-6 border border-[var(--border-card)] rounded-2xl bg-[var(--bg-card)] grid grid-cols-[1fr_auto] gap-x-4 gap-y-[0.1rem] items-start max-[520px]:grid-cols-1">
-            <span className="col-[1] text-[0.72rem] font-bold uppercase tracking-[0.08em] text-[var(--accent)]">
-              Experience
-            </span>
-            <span className="col-[2] [grid-row:1/3] text-[0.8rem] text-[var(--text-subtle)] whitespace-nowrap self-start max-[520px]:col-[1] max-[520px]:[grid-row:auto]">
-              2024 – 2025
-            </span>
-            <h3 className="col-[1] text-[1.05rem] font-bold tracking-[-0.02em] text-[var(--text)]">
-              Software Developer Trainee
-            </h3>
-            <p className="col-[1] text-sm text-[var(--text-muted)]">
-              <a
-                href="https://www.the-gym.rw/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold underline underline-offset-[2px] hover:text-[var(--accent)] transition-colors"
-              >
-                The Gym
-              </a>{" "}
-              — Rwanda
-            </p>
-            <p className="col-[1/-1] text-[0.9rem] text-[var(--text-muted)] leading-[1.7] mt-3">
-              Intensive training programme with mentorship from international senior
-              developers. Selected based on merit; focused on building
-              production-quality software through real-world projects.
-            </p>
+          <div className="p-6 border border-[var(--border-card)] rounded-2xl bg-[var(--bg-card)] flex gap-4 items-start">
+            {/* Logo badge */}
+            <a
+              href="https://www.the-gym.rw/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 w-[48px] h-[48px] rounded-lg overflow-hidden transition-opacity hover:opacity-80"
+            >
+              <Image
+                src="/images/thegym-logo.jpeg"
+                alt="The Gym"
+                width={48}
+                height={48}
+                className="object-cover w-full h-full"
+              />
+            </a>
+
+            {/* Content */}
+            <div className="flex-1 min-w-0">
+              <span className="text-[0.72rem] font-bold uppercase tracking-[0.08em] text-[var(--accent)]">
+                Experience
+              </span>
+              <div className="flex items-baseline justify-between gap-4 mt-0.5">
+                <h3 className="text-[1.05rem] font-bold tracking-[-0.02em] text-[var(--text)]">
+                  Software Developer Trainee
+                </h3>
+                <span className="text-[0.8rem] text-[var(--text-subtle)] whitespace-nowrap shrink-0">
+                  2024 – 2025
+                </span>
+              </div>
+              <p className="text-sm text-[var(--text-muted)] mt-0.5">
+                <a
+                  href="https://www.the-gym.rw/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold underline underline-offset-[2px] hover:text-[var(--accent)] transition-colors"
+                >
+                  The Gym
+                </a>{" "}
+                — Rwanda
+              </p>
+              <p className="text-[0.9rem] text-[var(--text-muted)] leading-[1.7] mt-3">
+                Intensive training programme with mentorship from international senior
+                developers. Selected based on merit; focused on building
+                production-quality software through real-world projects.
+              </p>
+            </div>
           </div>
 
         </div>

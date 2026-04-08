@@ -109,6 +109,20 @@ a:hover { text-decoration: underline; }
   margin-inline: auto;
 }
 
+/* ── Marquee ────────────────────────────────────────────────── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  animation: marquee 35s linear infinite;
+}
+
+.marquee-wrap:hover .marquee-track {
+  animation-play-state: paused;
+}
+
 /* ── Navigation ─────────────────────────────────────────────── */
 .nav-header {
   position: fixed;

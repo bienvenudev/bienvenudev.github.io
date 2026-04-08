@@ -3,18 +3,18 @@ import Link from "next/link";
 import SocialLinks from "@/components/SocialLinks";
 
 const SKILLS = [
-  "HTML5",
-  "CSS3",
-  "Tailwind CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Web Accessibility (A11Y)",
-  "Git",
-  "GitHub",
-  "Vite",
-  "npm",
+  { name: "HTML5",       icon: "devicon-html5-plain colored" },
+  { name: "CSS3",        icon: "devicon-css3-plain colored" },
+  { name: "Tailwind",    icon: "devicon-tailwindcss-plain colored" },
+  { name: "JavaScript",  icon: "devicon-javascript-plain colored" },
+  { name: "TypeScript",  icon: "devicon-typescript-plain colored" },
+  { name: "React",       icon: "devicon-react-original colored" },
+  { name: "Next.js",     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" },
+  { name: "Git",         icon: "devicon-git-plain colored" },
+  { name: "GitHub",      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" },
+  { name: "Vite",        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" },
+  { name: "Python",      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
+  { name: "npm",         icon: "devicon-npm-original-wordmark colored" },
 ];
 
 const PROJECTS = [
@@ -191,18 +191,44 @@ export default function Home() {
 
       {/* ── Skills ────────────────────────────────────────── */}
       <section id="Skills" className="py-20">
-        <h2 className="text-[clamp(1.6rem,3vw,2rem)] font-extrabold tracking-[-0.02em] text-[var(--text)] mb-6">
+        <h2 className="text-[clamp(1.6rem,3vw,2rem)] font-extrabold tracking-[-0.02em] text-[var(--text)] mb-8">
           Skills
         </h2>
-        <div className="flex flex-wrap gap-[0.6rem]">
-          {SKILLS.map((skill) => (
-            <span
-              key={skill}
-              className="text-sm font-medium py-[0.4rem] px-4 rounded-full border border-[var(--border-card)] bg-[var(--bg-card)] text-[var(--text-muted)] tracking-[0.01em] transition-colors duration-200 cursor-default hover:border-[var(--accent)] hover:text-[var(--accent)] hover:bg-[var(--accent-dim)]"
-            >
-              {skill}
-            </span>
-          ))}
+
+        {/* Marquee */}
+        <div className="relative overflow-hidden marquee-wrap">
+          {/* Left fade */}
+          <div
+            className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[var(--bg)] to-transparent z-10 pointer-events-none"
+            aria-hidden="true"
+          />
+          {/* Right fade */}
+          <div
+            className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[var(--bg)] to-transparent z-10 pointer-events-none"
+            aria-hidden="true"
+          />
+
+          {/* Scrolling strip — duplicated for seamless loop */}
+          <div className="marquee-track flex w-max items-end pb-2 gap-4">
+            {[...SKILLS, ...SKILLS].map(({ name, icon }, i) => (
+              <div
+                key={i}
+                className="flex flex-col items-center gap-2 mx-4"
+              >
+                <div className="w-[60px] h-[60px] rounded-xl bg-[var(--bg-card)] border border-[var(--border-card)] flex items-center justify-center">
+                  {icon.startsWith("https://") ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={icon} alt="" width={28} height={28} aria-hidden="true" />
+                  ) : (
+                    <i className={`${icon} text-[1.75rem]`} aria-hidden="true" />
+                  )}
+                </div>
+                <span className="text-xs text-[var(--text-muted)] whitespace-nowrap">
+                  {name}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -220,14 +246,14 @@ export default function Home() {
               href="https://alueducation.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="shrink-0 w-[48px] h-[48px] rounded-lg overflow-hidden flex items-center justify-center transition-opacity hover:opacity-80"
+              className="shrink-0 w-[48px] h-[48px] rounded-lg overflow-hidden transition-opacity hover:opacity-80"
             >
               <Image
-                src="/images/alu-logo.png"
+                src="/images/alu-logo-color.png"
                 alt="African Leadership University"
                 width={48}
                 height={48}
-                className="object-contain"
+                className="object-cover w-full h-full"
               />
             </a>
 

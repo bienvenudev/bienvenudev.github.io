@@ -44,6 +44,12 @@ export default function RootLayout({
         />
         <link rel="manifest" href="/favicon/site.webmanifest" />
 
+        {/* Devicons — tech logo icon font */}
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+        />
+
         {/*
           No-FOUC script: reads saved theme from localStorage and applies
           the `dark` class to <html> before the first paint, preventing

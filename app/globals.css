@@ -2,6 +2,8 @@
 
 /* ── Design Tokens ──────────────────────────────────────────── */
 :root {
+  --skill-mono-bg:     #ffffff;
+  --skill-mono-filter: none;
   --bg:           #f8f8f8;
   --bg-card:      #ffffff;
   --bg-card-hover:#f2f2f2;
@@ -17,6 +19,8 @@
 }
 
 html.dark {
+  --skill-mono-bg:     #161618;
+  --skill-mono-filter: invert(1);
   --bg:           #0c0c0c;
   --bg-card:      #141414;
   --bg-card-hover:#1c1c1c;

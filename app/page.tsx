@@ -4,16 +4,22 @@ import SocialLinks from "@/components/SocialLinks";
 
 const SKILLS = [
   { name: "HTML5",       icon: "devicon-html5-plain colored" },
-  { name: "CSS3",        icon: "devicon-css3-plain colored" },
+  { name: "CSS",        icon: "https://raw.githubusercontent.com/CSS-Next/logo.css/48f24dccd4e169118d17bab998c3d276e95167df/css.svg" },
   { name: "Tailwind",    icon: "devicon-tailwindcss-plain colored" },
   { name: "JavaScript",  icon: "devicon-javascript-plain colored" },
   { name: "TypeScript",  icon: "devicon-typescript-plain colored" },
   { name: "React",       icon: "devicon-react-original colored" },
-  { name: "Next.js",     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" },
+  { name: "Next.js",     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg", darkInvert: true },
+  { name: "Node.js",     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" },
+  { name: "NestJS",      icon: "devicon-nestjs-plain colored" },
   { name: "Git",         icon: "devicon-git-plain colored" },
-  { name: "GitHub",      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" },
+  { name: "GitHub",      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg", darkInvert: true },
+  { name: "MongoDB",     icon: "devicon-mongodb-plain colored" },
+  { name: "PostgreSQL",  icon: "devicon-postgresql-plain colored" },
+  { name: "Docker",      icon: "devicon-docker-plain colored" },
+  { name: "VSCode",      icon: "devicon-vscode-plain colored" },
+  { name: "Linux",       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" },
   { name: "Vite",        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" },
-  { name: "Python",      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
   { name: "npm",         icon: "devicon-npm-original-wordmark colored" },
 ];
 
@@ -210,17 +216,20 @@ export default function Home() {
 
           {/* Scrolling strip — duplicated for seamless loop */}
           <div className="marquee-track flex w-max items-end pb-2 gap-4">
-            {[...SKILLS, ...SKILLS].map(({ name, icon }, i) => (
+            {[...SKILLS, ...SKILLS].map(({ name, icon, darkInvert }, i) => (
               <div
                 key={i}
                 className="flex flex-col items-center gap-2 mx-4"
               >
-                <div className="w-[60px] h-[60px] rounded-xl bg-[var(--bg-card)] border border-[var(--border-card)] flex items-center justify-center">
+                <div
+                  className="w-[80px] h-[80px] rounded-xl flex items-center justify-center"
+                  style={{ background: darkInvert ? "var(--skill-mono-bg)" : "var(--bg-card)" }}
+                >
                   {icon.startsWith("https://") ? (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={icon} alt="" width={28} height={28} aria-hidden="true" />
+                    <img src={icon} alt="" width={40} height={40} style={darkInvert ? { filter: "var(--skill-mono-filter)" } : undefined} aria-hidden="true" />
                   ) : (
-                    <i className={`${icon} text-[1.75rem]`} aria-hidden="true" />
+                    <i className={`${icon} text-[2.50rem]`} aria-hidden="true" />
                   )}
                 </div>
                 <span className="text-xs text-[var(--text-muted)] whitespace-nowrap">

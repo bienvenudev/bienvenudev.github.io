@@ -2,9 +2,9 @@
 export default function SocialLinks() {
   const linkClass =
     "inline-flex items-center justify-center w-10 h-10 rounded-[10px] " +
-    "text-(--text-muted) border border-[var(--border-card)] bg-[var(--bg-card)] " +
+    "text-(--text-muted) border border-(--border-card) bg-(--bg-card) " +
     "transition-colors duration-200 no-underline " +
-    "hover:text-(--text) hover:border-[var(--accent)] hover:bg-[var(--accent-dim)]";
+    "hover:text-(--text) hover:border-(--accent) hover:bg-(--accent-dim)";
 
   return (
     <ul className="flex gap-3 list-none mt-2">

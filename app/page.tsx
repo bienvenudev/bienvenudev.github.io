@@ -64,12 +64,12 @@ export default function Home() {
         <div className="grid grid-cols-[1fr_auto] gap-16 items-center w-full py-16 max-md:grid-cols-1 max-md:gap-10 max-md:text-center max-md:py-10">
 
           {/* Left: text */}
-          <div className="flex flex-col gap-5 max-w-[560px] max-md:items-center max-md:order-2 max-md:max-w-full">
+          <div className="flex flex-col gap-5 max-w-140 max-md:items-center max-md:order-2 max-md:max-w-full">
 
             {/* Status badge */}
-            <span className="inline-flex items-center gap-2 text-[0.82rem] font-medium text-(--text-muted) bg-[var(--bg-card)] border border-[var(--border-card)] px-3 py-1.5 rounded-full w-fit tracking-[0.01em]">
+            <span className="inline-flex items-center gap-2 text-[0.82rem] font-medium text-(--text-muted) bg-(--bg-card) border border-(--border-card) px-3 py-1.5 rounded-full w-fit tracking-[0.01em]">
               <span
-                className="w-[7px] h-[7px] rounded-full bg-green-500 shadow-[0_0_6px_#22c55e] shrink-0"
+                className="w-1.75 h-1.75 rounded-full bg-green-500 shadow-[0_0_6px_#22c55e] shrink-0"
                 aria-hidden="true"
               />
               Available for work
@@ -82,7 +82,7 @@ export default function Home() {
             </h1>
 
             {/* Bio */}
-            <p className="text-(length:--text-body) leading-[1.75] text-(--text-muted) max-w-[500px]">
+            <p className="text-(length:--text-body) leading-[1.75] text-(--text-muted) max-w-125">
               A software engineering student and web developer from Rwanda,
               building{" "}
               <span className="text-(--accent) font-semibold">accessible</span>,
@@ -91,7 +91,7 @@ export default function Home() {
                 href="https://alueducation.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-(--text) font-semibold underline underline-offset-[3px] decoration-[var(--border-card)] hover:decoration-[var(--accent)] transition-colors"
+                className="text-(--text) font-semibold underline underline-offset-[3px] decoration-(--border-card) hover:decoration-(--accent) transition-colors"
               >
                 ALU
               </a>{" "}
@@ -100,7 +100,7 @@ export default function Home() {
                 href="https://www.the-gym.rw/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-(--text) font-semibold underline underline-offset-[3px] decoration-[var(--border-card)] hover:decoration-[var(--accent)] transition-colors"
+                className="text-(--text) font-semibold underline underline-offset-[3px] decoration-(--border-card) hover:decoration-(--accent) transition-colors"
               >
                 The Gym
               </a>
@@ -112,7 +112,7 @@ export default function Home() {
 
           {/* Right: avatar */}
           <div className="shrink-0 flex justify-center max-md:order-1">
-            <div className="relative w-[260px] h-[260px] rounded-full overflow-hidden border-2 border-[var(--border-card)] shadow-[0_0_0_8px_var(--accent-dim)] max-md:w-[180px] max-md:h-[180px]">
+            <div className="relative w-65 h-65 rounded-full overflow-hidden border-2 border-(--border-card) shadow-[0_0_0_8px_var(--accent-dim)] max-md:w-45 max-md:h-45">
               <Image
                 src="/images/bienvenu-bw.jpg"
                 alt="Bienvenu Cyuzuzo"
@@ -139,11 +139,11 @@ export default function Home() {
           {PROJECTS.map(({ num, name, desc, tags, live, slug, gradient }) => (
             <article
               key={slug}
-              className="rounded-[20px] overflow-hidden border border-[var(--border-card)] bg-[var(--bg-card)] transition-[transform,box-shadow] duration-[250ms] hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.15)]"
+              className="rounded-[20px] overflow-hidden border border-(--border-card) bg-(--bg-card) transition-[transform,box-shadow] duration-250 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.15)]"
             >
               {/* Gradient top */}
               <div
-                className="h-[180px] relative overflow-hidden"
+                className="h-45 relative overflow-hidden"
                 style={{ background: gradient }}
               >
                 <span
@@ -166,7 +166,7 @@ export default function Home() {
                   {tags.map((t) => (
                     <span
                       key={t}
-                      className="text-[0.72rem] font-medium text-(--text-subtle) bg-[var(--bg-card-hover)] py-[0.15rem] px-2 rounded-full border border-[var(--border)] tracking-[0.02em] uppercase"
+                      className="text-[0.72rem] font-medium text-(--text-subtle) bg-(--bg-card-hover) py-[0.15rem] px-2 rounded-full border border-(--border) tracking-[0.02em] uppercase"
                     >
                       {t}
                     </span>
@@ -205,12 +205,12 @@ export default function Home() {
         <div className="relative overflow-hidden marquee-wrap">
           {/* Left fade */}
           <div
-            className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[var(--bg)] to-transparent z-10 pointer-events-none"
+            className="absolute inset-y-0 left-0 w-20 bg-linear-to-r from-(--bg) to-transparent z-10 pointer-events-none"
             aria-hidden="true"
           />
           {/* Right fade */}
           <div
-            className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[var(--bg)] to-transparent z-10 pointer-events-none"
+            className="absolute inset-y-0 right-0 w-20 bg-linear-to-l from-(--bg) to-transparent z-10 pointer-events-none"
             aria-hidden="true"
           />
 
@@ -222,7 +222,7 @@ export default function Home() {
                 className="flex flex-col items-center gap-2 mx-4"
               >
                 <div
-                  className="w-[80px] h-[80px] rounded-xl flex items-center justify-center"
+                  className="w-20 h-20 rounded-xl flex items-center justify-center"
                   style={{ background: darkInvert ? "var(--skill-mono-bg)" : "var(--bg-card)" }}
                 >
                   {icon.startsWith("https://") ? (
@@ -249,13 +249,13 @@ export default function Home() {
         <div className="flex flex-col gap-4">
 
           {/* Education */}
-          <div className="p-6 border border-[var(--border-card)] rounded-2xl bg-[var(--bg-card)] flex gap-4 items-start">
+          <div className="p-6 border border-(--border-card) rounded-2xl bg-(--bg-card) flex gap-4 items-start">
             {/* Logo badge */}
             <a
               href="https://alueducation.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="shrink-0 w-[48px] h-[48px] rounded-lg overflow-hidden transition-opacity hover:opacity-80"
+              className="shrink-0 w-12 h-12 rounded-lg overflow-hidden transition-opacity hover:opacity-80"
             >
               <Image
                 src="/images/alu-logo-color.png"
@@ -284,7 +284,7 @@ export default function Home() {
                   href="https://alueducation.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-semibold underline underline-offset-[2px] hover:text-(--accent) transition-colors"
+                  className="font-semibold underline underline-offset-2 hover:text-(--accent) transition-colors"
                 >
                   African Leadership University
                 </a>{" "}
@@ -298,13 +298,13 @@ export default function Home() {
           </div>
 
           {/* Experience */}
-          <div className="p-6 border border-[var(--border-card)] rounded-2xl bg-[var(--bg-card)] flex gap-4 items-start">
+          <div className="p-6 border border-(--border-card) rounded-2xl bg-(--bg-card) flex gap-4 items-start">
             {/* Logo badge */}
             <a
               href="https://www.the-gym.rw/"
               target="_blank"
               rel="noopener noreferrer"
-              className="shrink-0 w-[48px] h-[48px] rounded-lg overflow-hidden transition-opacity hover:opacity-80"
+              className="shrink-0 w-12 h-12 rounded-lg overflow-hidden transition-opacity hover:opacity-80"
             >
               <Image
                 src="/images/thegym-logo.jpeg"
@@ -333,7 +333,7 @@ export default function Home() {
                   href="https://www.the-gym.rw/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-semibold underline underline-offset-[2px] hover:text-(--accent) transition-colors"
+                  className="font-semibold underline underline-offset-2 hover:text-(--accent) transition-colors"
                 >
                   The Gym
                 </a>{" "}

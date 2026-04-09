@@ -117,7 +117,7 @@ a:hover { text-decoration: underline; }
 
 /* ── Layout ─────────────────────────────────────────────────── */
 .wrapper {
-  width: min(95%, 1200px);
+  width: min(90%, 1400px);
   margin-inline: auto;
 }
 

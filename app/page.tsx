@@ -112,13 +112,16 @@ export default function Home() {
 
           {/* Right: avatar */}
           <div className="shrink-0 flex justify-center max-md:order-1">
-            <div className="relative w-65 h-65 rounded-full overflow-hidden border-2 border-(--border-card) shadow-[0_0_0_8px_var(--accent-dim)] max-md:w-45 max-md:h-45">
+            <div className="group relative w-65 h-65 overflow-hidden rounded-xl border-2 border-(--border-card)
+                           transition-all duration-300 ease-out
+                           hover:border-(--accent) hover:-translate-x-1.5 hover:-translate-y-1.5 hover:shadow-[6px_6px_0_0_var(--accent)]
+                           max-md:w-45 max-md:h-45">
               <Image
                 src="/images/bienvenu-bw.jpg"
                 alt="Bienvenu Cyuzuzo"
                 fill
                 sizes="358px"
-                className="object-cover object-top"
+                className="object-cover object-top transition-transform duration-300 ease-out group-hover:scale-[1.04]"
                 priority
               />
             </div>

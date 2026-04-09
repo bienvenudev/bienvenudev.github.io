@@ -97,8 +97,9 @@ button {
 
 /* ── Base ───────────────────────────────────────────────────── */
 html {
+  font-size: 137.5%;            /* 22px base ≈ 150% zoom feel; all rem values scale */
   scroll-behavior: smooth;
-  scroll-padding-top: 90px;
+  scroll-padding-top: 100px;   /* keeps anchors clear of the taller scaled nav */
 }
 
 body {
@@ -116,7 +117,7 @@ a:hover { text-decoration: underline; }
 
 /* ── Layout ─────────────────────────────────────────────────── */
 .wrapper {
-  width: min(90%, 1200px);
+  width: min(95%, 1200px);
   margin-inline: auto;
 }
 
@@ -139,7 +140,7 @@ a:hover { text-decoration: underline; }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 50;
-  height: 64px;
+  height: 72px;
   display: flex;
   align-items: center;
   transition: background-color 0.3s, border-color 0.3s, backdrop-filter 0.3s;
@@ -164,6 +165,7 @@ a:hover { text-decoration: underline; }
   color: var(--text) !important;
   text-decoration: none !important;
   flex-shrink: 0;
+  align-self: center;          /* prevent stretching to full nav height */
 }
 
 .nav-links {
@@ -180,6 +182,7 @@ a:hover { text-decoration: underline; }
   border-radius: 8px;
   transition: color 0.2s, background 0.2s;
   letter-spacing: 0.01em;
+  align-self: center;          /* prevent stretching to full nav height */
 }
 .nav-link:hover {
   color: var(--text) !important;

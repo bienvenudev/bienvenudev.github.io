@@ -59,7 +59,7 @@ export default function Home() {
       {/* ── Hero ──────────────────────────────────────────── */}
       <section
         id="About"
-        className="min-h-[calc(100svh-64px)] pt-16 flex items-center"
+        className="min-h-[calc(100svh-72px)] pt-16 flex items-center"
       >
         <div className="grid grid-cols-[1fr_auto] gap-16 items-center w-full py-16 max-md:grid-cols-1 max-md:gap-10 max-md:text-center max-md:py-10">
 
@@ -117,7 +117,7 @@ export default function Home() {
                 src="/images/bienvenu-bw.jpg"
                 alt="Bienvenu Cyuzuzo"
                 fill
-                sizes="260px"
+                sizes="358px"
                 className="object-cover object-top"
                 priority
               />
@@ -227,7 +227,7 @@ export default function Home() {
                 >
                   {icon.startsWith("https://") ? (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={icon} alt="" width={40} height={40} style={darkInvert ? { filter: "var(--skill-mono-filter)" } : undefined} aria-hidden="true" />
+                    <img src={icon} alt="" width={54} height={54} style={darkInvert ? { filter: "var(--skill-mono-filter)" } : undefined} aria-hidden="true" />
                   ) : (
                     <i className={`${icon} text-[2.50rem]`} aria-hidden="true" />
                   )}

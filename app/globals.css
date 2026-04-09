@@ -2,6 +2,13 @@
 
 /* ── Design Tokens ──────────────────────────────────────────── */
 :root {
+  /* ── Fluid type scale ── */
+  --text-hero:       clamp(2.6rem, 6vw, 4.5rem);   /* h1 on hero */
+  --text-section:    clamp(1.6rem, 3vw, 2rem);      /* h2 on each section */
+  --text-body:       clamp(1rem, 1.5vw, 1.15rem);   /* intro paragraph */
+  --text-case-hero:  clamp(2rem, 5vw, 3rem);        /* h1 on case-study pages */
+
+  /* ── Mono icon badges ── */
   --skill-mono-bg:     #ffffff;
   --skill-mono-filter: none;
   --bg:           #f8f8f8;
@@ -299,7 +306,7 @@ a:hover { text-decoration: underline; }
 }
 
 .case-study-hero h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: var(--text-case-hero);
   font-weight: 900;
   letter-spacing: -0.04em;
   line-height: 1.1;

@@ -67,7 +67,7 @@ export default function Home() {
           <div className="flex flex-col gap-5 max-w-[560px] max-md:items-center max-md:order-2 max-md:max-w-full">
 
             {/* Status badge */}
-            <span className="inline-flex items-center gap-2 text-[0.82rem] font-medium text-[var(--text-muted)] bg-[var(--bg-card)] border border-[var(--border-card)] px-3 py-1.5 rounded-full w-fit tracking-[0.01em]">
+            <span className="inline-flex items-center gap-2 text-[0.82rem] font-medium text-(--text-muted) bg-[var(--bg-card)] border border-[var(--border-card)] px-3 py-1.5 rounded-full w-fit tracking-[0.01em]">
               <span
                 className="w-[7px] h-[7px] rounded-full bg-green-500 shadow-[0_0_6px_#22c55e] shrink-0"
                 aria-hidden="true"
@@ -76,22 +76,22 @@ export default function Home() {
             </span>
 
             {/* Heading */}
-            <h1 className="text-[clamp(2.6rem,6vw,4.5rem)] font-black tracking-[-0.04em] leading-[1.05] text-[var(--text)]">
+            <h1 className="text-(length:--text-hero) font-black tracking-[-0.04em] leading-[1.05] text-(--text)">
               Hi, I&apos;m Bienvenu.<br />
-              <span className="text-[var(--accent)]">Frontend Dev.</span>
+              <span className="text-(--accent)">Frontend Dev.</span>
             </h1>
 
             {/* Bio */}
-            <p className="text-[clamp(1rem,1.5vw,1.15rem)] leading-[1.75] text-[var(--text-muted)] max-w-[500px]">
+            <p className="text-(length:--text-body) leading-[1.75] text-(--text-muted) max-w-[500px]">
               A software engineering student and web developer from Rwanda,
               building{" "}
-              <span className="text-[var(--accent)] font-semibold">accessible</span>,
+              <span className="text-(--accent) font-semibold">accessible</span>,
               performant products. Studying at{" "}
               <a
                 href="https://alueducation.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[var(--text)] font-semibold underline underline-offset-[3px] decoration-[var(--border-card)] hover:decoration-[var(--accent)] transition-colors"
+                className="text-(--text) font-semibold underline underline-offset-[3px] decoration-[var(--border-card)] hover:decoration-[var(--accent)] transition-colors"
               >
                 ALU
               </a>{" "}
@@ -100,7 +100,7 @@ export default function Home() {
                 href="https://www.the-gym.rw/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[var(--text)] font-semibold underline underline-offset-[3px] decoration-[var(--border-card)] hover:decoration-[var(--accent)] transition-colors"
+                className="text-(--text) font-semibold underline underline-offset-[3px] decoration-[var(--border-card)] hover:decoration-[var(--accent)] transition-colors"
               >
                 The Gym
               </a>
@@ -129,10 +129,10 @@ export default function Home() {
       {/* ── Projects ──────────────────────────────────────── */}
       <section id="Projects" className="py-20">
         <div className="mb-10">
-          <h2 className="text-[clamp(1.6rem,3vw,2rem)] font-extrabold tracking-[-0.02em] text-[var(--text)]">
+          <h2 className="text-(length:--text-section) font-extrabold tracking-[-0.02em] text-(--text)">
             Projects
           </h2>
-          <p className="mt-1 text-[0.95rem] text-[var(--text-muted)]">Selected client work</p>
+          <p className="mt-1 text-[0.95rem] text-(--text-muted)">Selected client work</p>
         </div>
 
         <div className="grid grid-cols-2 gap-5 max-[700px]:grid-cols-1">
@@ -157,16 +157,16 @@ export default function Home() {
 
               {/* Body */}
               <div className="px-6 pt-5 pb-6 flex flex-col gap-2">
-                <h3 className="text-[1.1rem] font-bold tracking-[-0.02em] text-[var(--text)]">
+                <h3 className="text-[1.1rem] font-bold tracking-[-0.02em] text-(--text)">
                   {name}
                 </h3>
-                <p className="text-[0.9rem] text-[var(--text-muted)] leading-[1.6]">{desc}</p>
+                <p className="text-[0.9rem] text-(--text-muted) leading-[1.6]">{desc}</p>
 
                 <div className="flex flex-wrap gap-[0.4rem] mt-1">
                   {tags.map((t) => (
                     <span
                       key={t}
-                      className="text-[0.72rem] font-medium text-[var(--text-subtle)] bg-[var(--bg-card-hover)] py-[0.15rem] px-2 rounded-full border border-[var(--border)] tracking-[0.02em] uppercase"
+                      className="text-[0.72rem] font-medium text-(--text-subtle) bg-[var(--bg-card-hover)] py-[0.15rem] px-2 rounded-full border border-[var(--border)] tracking-[0.02em] uppercase"
                     >
                       {t}
                     </span>
@@ -178,13 +178,13 @@ export default function Home() {
                     href={live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-semibold text-[var(--accent)] no-underline hover:underline"
+                    className="text-sm font-semibold text-(--accent) no-underline hover:underline"
                   >
                     Live site ↗
                   </a>
                   <Link
                     href={`/projects/${slug}`}
-                    className="text-sm font-semibold text-[var(--accent)] no-underline hover:underline"
+                    className="text-sm font-semibold text-(--accent) no-underline hover:underline"
                   >
                     Case Study →
                   </Link>
@@ -197,7 +197,7 @@ export default function Home() {
 
       {/* ── Skills ────────────────────────────────────────── */}
       <section id="Skills" className="py-20">
-        <h2 className="text-[clamp(1.6rem,3vw,2rem)] font-extrabold tracking-[-0.02em] text-[var(--text)] mb-8">
+        <h2 className="text-(length:--text-section) font-extrabold tracking-[-0.02em] text-(--text) mb-8">
           Skills
         </h2>
 
@@ -232,7 +232,7 @@ export default function Home() {
                     <i className={`${icon} text-[2.50rem]`} aria-hidden="true" />
                   )}
                 </div>
-                <span className="text-xs text-[var(--text-muted)] whitespace-nowrap">
+                <span className="text-xs text-(--text-muted) whitespace-nowrap">
                   {name}
                 </span>
               </div>
@@ -243,7 +243,7 @@ export default function Home() {
 
       {/* ── Background ────────────────────────────────────── */}
       <section id="Background" className="py-20">
-        <h2 className="text-[clamp(1.6rem,3vw,2rem)] font-extrabold tracking-[-0.02em] text-[var(--text)] mb-8">
+        <h2 className="text-(length:--text-section) font-extrabold tracking-[-0.02em] text-(--text) mb-8">
           Background
         </h2>
         <div className="flex flex-col gap-4">
@@ -268,29 +268,29 @@ export default function Home() {
 
             {/* Content */}
             <div className="flex-1 min-w-0">
-              <span className="text-[0.72rem] font-bold uppercase tracking-[0.08em] text-[var(--accent)]">
+              <span className="text-[0.72rem] font-bold uppercase tracking-[0.08em] text-(--accent)">
                 Education
               </span>
               <div className="flex items-baseline justify-between gap-4 mt-0.5">
-                <h3 className="text-[1.05rem] font-bold tracking-[-0.02em] text-[var(--text)]">
+                <h3 className="text-[1.05rem] font-bold tracking-[-0.02em] text-(--text)">
                   BSc. (Hons) Software Engineering
                 </h3>
-                <span className="text-[0.8rem] text-[var(--text-subtle)] whitespace-nowrap shrink-0">
+                <span className="text-[0.8rem] text-(--text-subtle) whitespace-nowrap shrink-0">
                   2024 – 2027
                 </span>
               </div>
-              <p className="text-sm text-[var(--text-muted)] mt-0.5">
+              <p className="text-sm text-(--text-muted) mt-0.5">
                 <a
                   href="https://alueducation.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-semibold underline underline-offset-[2px] hover:text-[var(--accent)] transition-colors"
+                  className="font-semibold underline underline-offset-[2px] hover:text-(--accent) transition-colors"
                 >
                   African Leadership University
                 </a>{" "}
                 — Rwanda
               </p>
-              <p className="text-[0.9rem] text-[var(--text-muted)] leading-[1.7] mt-3">
+              <p className="text-[0.9rem] text-(--text-muted) leading-[1.7] mt-3">
                 A software engineering programme in partnership with Holberton School,
                 focused on practical skills through project-based and peer learning.
               </p>
@@ -317,29 +317,29 @@ export default function Home() {
 
             {/* Content */}
             <div className="flex-1 min-w-0">
-              <span className="text-[0.72rem] font-bold uppercase tracking-[0.08em] text-[var(--accent)]">
+              <span className="text-[0.72rem] font-bold uppercase tracking-[0.08em] text-(--accent)">
                 Experience
               </span>
               <div className="flex items-baseline justify-between gap-4 mt-0.5">
-                <h3 className="text-[1.05rem] font-bold tracking-[-0.02em] text-[var(--text)]">
+                <h3 className="text-[1.05rem] font-bold tracking-[-0.02em] text-(--text)">
                   Software Developer Trainee
                 </h3>
-                <span className="text-[0.8rem] text-[var(--text-subtle)] whitespace-nowrap shrink-0">
+                <span className="text-[0.8rem] text-(--text-subtle) whitespace-nowrap shrink-0">
                   2024 – 2025
                 </span>
               </div>
-              <p className="text-sm text-[var(--text-muted)] mt-0.5">
+              <p className="text-sm text-(--text-muted) mt-0.5">
                 <a
                   href="https://www.the-gym.rw/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-semibold underline underline-offset-[2px] hover:text-[var(--accent)] transition-colors"
+                  className="font-semibold underline underline-offset-[2px] hover:text-(--accent) transition-colors"
                 >
                   The Gym
                 </a>{" "}
                 — Rwanda
               </p>
-              <p className="text-[0.9rem] text-[var(--text-muted)] leading-[1.7] mt-3">
+              <p className="text-[0.9rem] text-(--text-muted) leading-[1.7] mt-3">
                 Intensive training programme with mentorship from international senior
                 developers. Selected based on merit; focused on building
                 production-quality software through real-world projects.

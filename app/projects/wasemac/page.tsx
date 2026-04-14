@@ -49,13 +49,19 @@ export default function WasemacCaseStudy() {
         </a>
       </div>
 
-      {/* ── Hero screenshot ──────────────────────────────────── */}
-      <div className="rounded-2xl overflow-hidden border border-(--border-card) mb-10">
+      {/* ── Hero screenshot — bleeds wider than the prose column ─ */}
+      <div
+        className="rounded-2xl overflow-hidden border border-(--border-card) mb-10"
+        style={{
+          width: "min(90vw, 1100px)",
+          marginLeft: "calc(50% - min(45vw, 550px))",
+        }}
+      >
         <Image
           src="/images/projects/wasemac/wasemac-homepage.png"
           alt="Wasemac homepage"
-          width={720}
-          height={480}
+          width={1100}
+          height={733}
           className="w-full h-auto"
           priority
         />

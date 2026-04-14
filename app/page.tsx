@@ -26,15 +26,6 @@ const SKILLS = [
 const PROJECTS = [
   {
     num: "01",
-    name: "DriveKGL",
-    desc: "Car rental website for a Kigali-based client.",
-    tags: ["HTML", "CSS", "JavaScript"],
-    live: "https://drivekgl.com/",
-    slug: "drivekgl",
-    gradient: "linear-gradient(135deg, #1e1b4b 0%, #4c1d95 100%)",
-  },
-  {
-    num: "02",
     name: "Wasemac",
     desc: "Corporate website for a water & sewage engineering firm in Rwanda.",
     tags: ["HTML", "CSS", "JavaScript"],
@@ -43,13 +34,22 @@ const PROJECTS = [
     gradient: "linear-gradient(135deg, #042f2e 0%, #0d9488 100%)",
   },
   {
+    num: "02",
+    name: "Car Sharing App",
+    desc: "Full-stack car sharing platform built during a structured bootcamp sprint in Kigali.",
+    tags: ["React", "TypeScript", "NestJS", "Docker"],
+    live: null as string | null,
+    slug: "car-sharing",
+    gradient: "linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%)",
+  },
+  {
     num: "03",
-    name: "Impact1000 Africa",
-    desc: "Promotional site for an initiative training 1,000 businesses across Africa.",
-    tags: ["HTML", "CSS", "JavaScript"],
-    live: "https://pulsepediagroup.com/impact1000-africa/",
-    slug: "impact1000",
-    gradient: "linear-gradient(135deg, #431407 0%, #c2410c 100%)",
+    name: "Atlas",
+    desc: "Mentorship platform connecting Rwandan diaspora professionals with local youth.",
+    tags: ["Team Project"],
+    live: null as string | null,
+    slug: "atlas",
+    gradient: "linear-gradient(135deg, #2e1065 0%, #7c3aed 100%)",
   },
 ];
 
@@ -135,7 +135,7 @@ export default function Home() {
           <h2 className="text-(length:--text-section) font-extrabold tracking-[-0.02em] text-(--text)">
             Projects
           </h2>
-          <p className="mt-1 text-[0.95rem] text-(--text-muted)">Selected client work</p>
+          <p className="mt-1 text-[0.95rem] text-(--text-muted)">Selected work</p>
         </div>
 
         <div className="grid grid-cols-2 gap-5 max-[700px]:grid-cols-1">
@@ -177,14 +177,16 @@ export default function Home() {
                 </div>
 
                 <div className="flex gap-5 mt-2">
-                  <a
-                    href={live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm font-semibold text-(--accent) no-underline hover:underline"
-                  >
-                    Live site ↗
-                  </a>
+                  {live && (
+                    <a
+                      href={live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm font-semibold text-(--accent) no-underline hover:underline"
+                    >
+                      Live site ↗
+                    </a>
+                  )}
                   <Link
                     href={`/projects/${slug}`}
                     className="text-sm font-semibold text-(--accent) no-underline hover:underline"

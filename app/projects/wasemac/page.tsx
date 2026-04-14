@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Wasemac Case Study | Bienvenu Cyuzuzo",
@@ -16,60 +17,52 @@ const META = [
 
 export default function WasemacCaseStudy() {
   return (
-    <article className="max-w-[720px] mx-auto mb-24">
+    <article className="max-w-[720px] mx-auto mt-24 mb-24">
 
-      {/* ── Full-bleed hero ──────────────────────────────────── */}
-      {/*
-        width: 100vw + margin-left: calc(50% - 50vw)
-        breaks out of the 720px prose column to fill the full viewport.
-        50% = half the article width (360px at max), 50vw = half viewport.
-      */}
-      <div
-        className="relative overflow-hidden min-h-[90svh] flex flex-col"
-        style={{ width: "100vw", marginLeft: "calc(50% - 50vw)" }}
+      {/* ── Back link ─────────────────────────────────────────── */}
+      <Link
+        href="/#Projects"
+        className="inline-flex items-center gap-1.5 text-sm font-semibold
+                   text-(--text-muted) hover:text-(--accent) transition-colors
+                   no-underline mb-10"
       >
-        {/* Background — 📸 Replace with: full-width screenshot of wasemacltd.com */}
+        ← Back to Projects
+      </Link>
+
+      {/* ── Header ───────────────────────────────────────────── */}
+      <div className="text-center mb-10">
+        <h1 className="text-[clamp(3rem,8vw,5rem)] font-black tracking-[-0.04em]
+                       leading-[1.05] text-(--text) mb-3">
+          Wasemac
+        </h1>
+        <p className="text-(--text-muted) text-lg font-medium">
+          Water &amp; sewage engineering — Rwanda
+        </p>
+        <a
+          href="https://wasemacltd.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 mt-5 text-sm font-semibold
+                     text-(--accent) hover:underline no-underline"
+        >
+          Visit live site ↗
+        </a>
+      </div>
+
+      {/* ── Hero screenshot ──────────────────────────────────── */}
+      <div className="rounded-2xl overflow-hidden border border-(--border-card) mb-10">
         <Image
-          src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1600&q=80"
-          alt="Water and sewage engineering infrastructure — placeholder, replace with Wasemac site screenshot"
-          fill
-          className="object-cover object-center"
+          src="/images/projects/wasemac/wasemac-homepage.png"
+          alt="Wasemac homepage"
+          width={720}
+          height={480}
+          className="w-full h-auto"
           priority
         />
-
-        {/* Gradient overlay: light at top → heavy at bottom for legible text */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/45 to-black/80" />
-
-        {/* Project info — anchored to bottom */}
-        <div className="relative z-10 mt-auto px-8 pb-14 max-w-[1024px] mx-auto w-full text-center">
-
-          {/* Title */}
-          <h1 className="text-white font-black text-[clamp(3rem,8vw,5.5rem)]
-                         tracking-[-0.04em] leading-[1.05] mb-3">
-            Wasemac
-          </h1>
-
-          {/* Tagline */}
-          <p className="text-white/70 text-lg font-medium mb-7">
-            Corporate web presence for a water &amp; sewage engineering firm — Rwanda
-          </p>
-
-          {/* CTA */}
-          <a
-            href="https://wasemacltd.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-white
-                       bg-white/20 hover:bg-white/30 px-4 py-2.5 rounded-lg
-                       border border-white/25 transition-colors no-underline"
-          >
-            Visit live site ↗
-          </a>
-        </div>
       </div>
 
       {/* ── Meta strip ──────────────────────────────────────── */}
-      <div className="flex gap-8 flex-wrap pt-10 pb-8 border-b border-(--border-card)">
+      <div className="flex gap-8 flex-wrap pb-8 border-b border-(--border-card)">
         {META.map(({ label, value }) => (
           <div key={label}>
             <span className="text-[0.7rem] font-bold uppercase tracking-[0.08em] text-(--text-subtle) block mb-0.5">
@@ -91,20 +84,6 @@ export default function WasemacCaseStudy() {
         gives potential partners and government clients confidence in their
         capabilities.
       </p>
-
-      {/* ── Screenshot 1: Homepage ───────────────────────────── */}
-      <figure className="my-10">
-        <div className="rounded-xl overflow-hidden border border-(--border-card) bg-(--bg-card)
-                        flex items-center justify-center h-[280px]">
-          <p className="text-(--text-subtle) text-sm text-center px-8 leading-[1.8]">
-            📸 <strong className="text-(--text)">Replace with:</strong> Wasemac homepage screenshot<br />
-            <span className="text-xs">(hero section + services overview)</span>
-          </p>
-        </div>
-        <figcaption className="mt-2.5 text-center text-[0.8rem] text-(--text-subtle)">
-          Wasemac homepage — hero &amp; services overview
-        </figcaption>
-      </figure>
 
       {/* ── The Problem ──────────────────────────────────────── */}
       <h2 className="text-[1.1rem] font-bold text-(--accent) mt-10 mb-3 tracking-[-0.01em]">
@@ -141,17 +120,19 @@ export default function WasemacCaseStudy() {
         <li className="mb-[0.4rem] leading-[1.7]">Fully responsive layout optimised for mobile and desktop</li>
       </ul>
 
-      {/* ── Screenshot 2: Services / Interior page ───────────── */}
+      {/* ── Screenshot: About page ───────────────────────────── */}
       <figure className="my-10">
-        <div className="rounded-xl overflow-hidden border border-(--border-card) bg-(--bg-card)
-                        flex items-center justify-center h-[280px]">
-          <p className="text-(--text-subtle) text-sm text-center px-8 leading-[1.8]">
-            📸 <strong className="text-(--text)">Replace with:</strong> Wasemac services page screenshot<br />
-            <span className="text-xs">(services listing or project portfolio section)</span>
-          </p>
+        <div className="rounded-xl overflow-hidden border border-(--border-card)">
+          <Image
+            src="/images/projects/wasemac/wasemac-about.png"
+            alt="Wasemac about page"
+            width={720}
+            height={400}
+            className="w-full h-auto"
+          />
         </div>
         <figcaption className="mt-2.5 text-center text-[0.8rem] text-(--text-subtle)">
-          Services page — engineering offerings
+          About page — company profile &amp; team
         </figcaption>
       </figure>
 

@@ -110,6 +110,7 @@ body {
   color: var(--text);
   font-size: 1rem;
   transition: background-color 0.3s, color 0.3s;
+  overflow-x: clip; /* prevents scrollbar from full-bleed technique */
 }
 
 a {

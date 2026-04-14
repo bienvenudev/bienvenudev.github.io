@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Wasemac Case Study | Bienvenu Cyuzuzo",
@@ -7,59 +7,80 @@ export const metadata: Metadata = {
     "How I built the corporate website for Wasemac Ltd, a water and sewage solutions company in Rwanda.",
 };
 
+const META = [
+  { label: "Year",   value: "2024" },
+  { label: "Client", value: "Wasemac Ltd" },
+  { label: "Role",   value: "Sole Developer" },
+  { label: "Stack",  value: "HTML · CSS · JS" },
+];
+
 export default function WasemacCaseStudy() {
   return (
-    <article className="mx-auto mt-28 mb-20 max-w-[720px]">
+    <article className="max-w-[720px] mx-auto mb-24">
 
-      {/* Back link */}
-      <Link
-        href="/#Projects"
-        className="inline-flex items-center gap-[0.4rem] mb-10 text-sm font-semibold
-                   text-(--text-muted) no-underline py-[0.4rem] px-3
-                   border border-(--border-card) rounded-lg bg-(--bg-card)
-                   transition-colors duration-200
-                   hover:text-(--accent) hover:border-(--accent) hover:no-underline"
+      {/* ── Full-bleed hero ──────────────────────────────────── */}
+      {/*
+        width: 100vw + margin-left: calc(50% - 50vw)
+        breaks out of the 720px prose column to fill the full viewport.
+        50% = half the article width (360px at max), 50vw = half viewport.
+      */}
+      <div
+        className="relative overflow-hidden min-h-[90svh] flex flex-col"
+        style={{ width: "100vw", marginLeft: "calc(50% - 50vw)" }}
       >
-        ← Back to Projects
-      </Link>
+        {/* Background — 📸 Replace with: full-width screenshot of wasemacltd.com */}
+        <Image
+          src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1600&q=80"
+          alt="Water and sewage engineering infrastructure — placeholder, replace with Wasemac site screenshot"
+          fill
+          className="object-cover object-center"
+          priority
+        />
 
-      {/* Hero */}
-      <div className="mb-12 pb-10 border-b border-(--border-card)">
-        <h1 className="text-(length:--text-case-hero) font-black tracking-[-0.04em] leading-[1.1] mb-4">
-          Wasemac
-        </h1>
+        {/* Gradient overlay: light at top → heavy at bottom for legible text */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/45 to-black/80" />
 
-        {/* Tags */}
-        <div className="flex flex-wrap gap-2 my-4">
-          {["HTML", "CSS", "JavaScript", "Client Work", "Corporate", "Rwanda"].map((tag) => (
-            <span
-              key={tag}
-              className="text-[0.78rem] font-medium py-[0.2rem] px-[0.7rem]
-                         rounded-full bg-(--accent-dim) text-(--accent)
-                         border border-(--accent)/30"
-            >
-              {tag}
-            </span>
-          ))}
+        {/* Project info — anchored to bottom */}
+        <div className="relative z-10 mt-auto px-8 pb-14 max-w-[1024px] mx-auto w-full text-center">
+
+          {/* Title */}
+          <h1 className="text-white font-black text-[clamp(3rem,8vw,5.5rem)]
+                         tracking-[-0.04em] leading-[1.05] mb-3">
+            Wasemac
+          </h1>
+
+          {/* Tagline */}
+          <p className="text-white/70 text-lg font-medium mb-7">
+            Corporate web presence for a water &amp; sewage engineering firm — Rwanda
+          </p>
+
+          {/* CTA */}
+          <a
+            href="https://wasemacltd.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-white
+                       bg-white/20 hover:bg-white/30 px-4 py-2.5 rounded-lg
+                       border border-white/25 transition-colors no-underline"
+          >
+            Visit live site ↗
+          </a>
         </div>
-
-        <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
-          A corporate website for Wasemac Ltd, a water and sewage engineering
-          solutions company operating in Rwanda. The site communicates their
-          services, expertise, and project portfolio to prospective clients.
-        </p>
-
-        <a
-          href="https://wasemacltd.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-[0.35rem] mt-5 text-[0.9rem] font-semibold text-(--accent) hover:underline"
-        >
-          Visit live site ↗
-        </a>
       </div>
 
-      {/* Overview */}
+      {/* ── Meta strip ──────────────────────────────────────── */}
+      <div className="flex gap-8 flex-wrap pt-10 pb-8 border-b border-(--border-card)">
+        {META.map(({ label, value }) => (
+          <div key={label}>
+            <span className="text-[0.7rem] font-bold uppercase tracking-[0.08em] text-(--text-subtle) block mb-0.5">
+              {label}
+            </span>
+            <span className="text-(--text) font-medium text-sm">{value}</span>
+          </div>
+        ))}
+      </div>
+
+      {/* ── Overview ─────────────────────────────────────────── */}
       <h2 className="text-[1.1rem] font-bold text-(--accent) mt-10 mb-3 tracking-[-0.01em]">
         Overview
       </h2>
@@ -71,7 +92,21 @@ export default function WasemacCaseStudy() {
         capabilities.
       </p>
 
-      {/* Problem */}
+      {/* ── Screenshot 1: Homepage ───────────────────────────── */}
+      <figure className="my-10">
+        <div className="rounded-xl overflow-hidden border border-(--border-card) bg-(--bg-card)
+                        flex items-center justify-center h-[280px]">
+          <p className="text-(--text-subtle) text-sm text-center px-8 leading-[1.8]">
+            📸 <strong className="text-(--text)">Replace with:</strong> Wasemac homepage screenshot<br />
+            <span className="text-xs">(hero section + services overview)</span>
+          </p>
+        </div>
+        <figcaption className="mt-2.5 text-center text-[0.8rem] text-(--text-subtle)">
+          Wasemac homepage — hero &amp; services overview
+        </figcaption>
+      </figure>
+
+      {/* ── The Problem ──────────────────────────────────────── */}
       <h2 className="text-[1.1rem] font-bold text-(--accent) mt-10 mb-3 tracking-[-0.01em]">
         The Problem
       </h2>
@@ -83,7 +118,7 @@ export default function WasemacCaseStudy() {
         a company bidding on large infrastructure contracts.
       </p>
 
-      {/* Role */}
+      {/* ── My Role ──────────────────────────────────────────── */}
       <h2 className="text-[1.1rem] font-bold text-(--accent) mt-10 mb-3 tracking-[-0.01em]">
         My Role
       </h2>
@@ -93,12 +128,12 @@ export default function WasemacCaseStudy() {
         build and deploy the site.
       </p>
 
-      {/* What I built */}
+      {/* ── What I Built ─────────────────────────────────────── */}
       <h2 className="text-[1.1rem] font-bold text-(--accent) mt-10 mb-3 tracking-[-0.01em]">
         What I Built
       </h2>
       <ul className="pl-6 mb-4 text-(--text-muted) list-disc">
-        <li className="mb-[0.4rem] leading-[1.7]">A multi-section corporate homepage (hero, services, about, projects)</li>
+        <li className="mb-[0.4rem] leading-[1.7]">Multi-section corporate homepage (hero, services, about, projects)</li>
         <li className="mb-[0.4rem] leading-[1.7]">Services page clearly outlining their engineering offerings</li>
         <li className="mb-[0.4rem] leading-[1.7]">Project portfolio section to showcase past work</li>
         <li className="mb-[0.4rem] leading-[1.7]">Company profile / about page with key team information</li>
@@ -106,17 +141,31 @@ export default function WasemacCaseStudy() {
         <li className="mb-[0.4rem] leading-[1.7]">Fully responsive layout optimised for mobile and desktop</li>
       </ul>
 
-      {/* Tech stack */}
+      {/* ── Screenshot 2: Services / Interior page ───────────── */}
+      <figure className="my-10">
+        <div className="rounded-xl overflow-hidden border border-(--border-card) bg-(--bg-card)
+                        flex items-center justify-center h-[280px]">
+          <p className="text-(--text-subtle) text-sm text-center px-8 leading-[1.8]">
+            📸 <strong className="text-(--text)">Replace with:</strong> Wasemac services page screenshot<br />
+            <span className="text-xs">(services listing or project portfolio section)</span>
+          </p>
+        </div>
+        <figcaption className="mt-2.5 text-center text-[0.8rem] text-(--text-subtle)">
+          Services page — engineering offerings
+        </figcaption>
+      </figure>
+
+      {/* ── Tech Stack ───────────────────────────────────────── */}
       <h2 className="text-[1.1rem] font-bold text-(--accent) mt-10 mb-3 tracking-[-0.01em]">
         Tech Stack
       </h2>
       <ul className="pl-6 mb-4 text-(--text-muted) list-disc">
         <li className="mb-[0.4rem] leading-[1.7]">HTML5 &amp; CSS3 — semantic structure with custom styles</li>
-        <li className="mb-[0.4rem] leading-[1.7]">Vanilla JavaScript — for interactive components</li>
+        <li className="mb-[0.4rem] leading-[1.7]">Vanilla JavaScript — interactive components</li>
         <li className="mb-[0.4rem] leading-[1.7]">Responsive design patterns for mobile-first layout</li>
       </ul>
 
-      {/* Challenges */}
+      {/* ── Challenges ───────────────────────────────────────── */}
       <h2 className="text-[1.1rem] font-bold text-(--accent) mt-10 mb-3 tracking-[-0.01em]">
         Challenges &amp; Solutions
       </h2>
@@ -127,7 +176,7 @@ export default function WasemacCaseStudy() {
         image-heavy portfolio pages and performance trade-offs.
       </div>
 
-      {/* Outcomes */}
+      {/* ── Outcomes ─────────────────────────────────────────── */}
       <h2 className="text-[1.1rem] font-bold text-(--accent) mt-10 mb-3 tracking-[-0.01em]">
         Outcomes
       </h2>
@@ -137,7 +186,7 @@ export default function WasemacCaseStudy() {
         Add any qualitative or quantitative results here.
       </div>
 
-      {/* Learnings */}
+      {/* ── Learnings ────────────────────────────────────────── */}
       <h2 className="text-[1.1rem] font-bold text-(--accent) mt-10 mb-3 tracking-[-0.01em]">
         What I Learned
       </h2>

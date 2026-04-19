@@ -101,7 +101,6 @@ button {
 /* ── Base ───────────────────────────────────────────────────── */
 html {
   font-size: 137.5%;            /* 22px base ≈ 150% zoom feel; all rem values scale */
-  scroll-behavior: smooth;
   scroll-padding-top: 100px;   /* keeps anchors clear of the taller scaled nav */
 }
 

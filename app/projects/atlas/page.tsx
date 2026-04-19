@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -40,19 +41,21 @@ export default function AtlasCaseStudy() {
       </div>
 
       {/* ── Hero screenshot — bleeds wider than the prose column ─ */}
-      {/* 📸 Replace with: Atlas homepage or dashboard screenshot */}
       <div
-        className="rounded-2xl overflow-hidden border border-(--border-card) bg-(--bg-card)
-                   flex items-center justify-center h-[420px] mb-10"
+        className="rounded-2xl overflow-hidden border border-(--border-card) mb-10"
         style={{
           width: "min(90vw, 1100px)",
           marginLeft: "calc(50% - min(45vw, 550px))",
         }}
       >
-        <p className="text-(--text-subtle) text-sm text-center px-8 leading-[1.8]">
-          📸 <strong className="text-(--text)">Replace with:</strong> Atlas — homepage or mentor discovery screen<br />
-          <span className="text-xs">(desktop view)</span>
-        </p>
+        <Image
+          src="/images/projects/atlas/atlas-homepage.png"
+          alt="Atlas homepage"
+          width={1100}
+          height={733}
+          className="w-full h-auto"
+          priority
+        />
       </div>
 
       {/* ── Meta strip ──────────────────────────────────────── */}
@@ -117,15 +120,16 @@ export default function AtlasCaseStudy() {
         <li className="mb-[0.4rem] leading-[1.7]">Profile management for diaspora professionals</li>
       </ul>
 
-      {/* ── Screenshot: interior view ────────────────────────── */}
-      {/* 📸 Replace with: mentor profile or connection screen */}
+      {/* ── Screenshot: mentor discovery ─────────────────────── */}
       <figure className="my-10">
-        <div className="rounded-xl overflow-hidden border border-(--border-card) bg-(--bg-card)
-                        flex items-center justify-center h-[280px]">
-          <p className="text-(--text-subtle) text-sm text-center px-8 leading-[1.8]">
-            📸 <strong className="text-(--text)">Replace with:</strong> Mentor profile or discovery screen<br />
-            <span className="text-xs">(any interior page of the Atlas platform)</span>
-          </p>
+        <div className="rounded-xl overflow-hidden border border-(--border-card)">
+          <Image
+            src="/images/projects/atlas/atlas-mentor-discovery.png"
+            alt="Atlas mentor discovery screen"
+            width={720}
+            height={400}
+            className="w-full h-auto"
+          />
         </div>
         <figcaption className="mt-2.5 text-center text-[0.8rem] text-(--text-subtle)">
           Mentor discovery — connect with diaspora professionals

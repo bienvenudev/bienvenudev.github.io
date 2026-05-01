@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
+import LightboxProvider from "@/components/LightboxProvider";
+import LightboxImage from "@/components/LightboxImage";
 
 export const metadata: Metadata = {
   title: "Wasemac Case Study | Bienvenu Cyuzuzo",
@@ -17,6 +18,7 @@ const META = [
 
 export default function WasemacCaseStudy() {
   return (
+    <LightboxProvider>
     <article className="max-w-[720px] mx-auto mt-24 mb-24">
 
       {/* ── Back link ─────────────────────────────────────────── */}
@@ -57,12 +59,13 @@ export default function WasemacCaseStudy() {
           marginLeft: "calc(50% - min(45vw, 550px))",
         }}
       >
-        <Image
+        <LightboxImage
           src="/images/projects/wasemac/wasemac-homepage.png"
           alt="Wasemac homepage"
           width={1100}
           height={733}
           className="w-full h-auto"
+          caption="Wasemac homepage"
           priority
         />
       </div>
@@ -129,12 +132,13 @@ export default function WasemacCaseStudy() {
       {/* ── Screenshot: About page ───────────────────────────── */}
       <figure className="my-10">
         <div className="rounded-xl overflow-hidden border border-(--border-card)">
-          <Image
+          <LightboxImage
             src="/images/projects/wasemac/wasemac-about.png"
             alt="Wasemac about page"
             width={720}
             height={400}
             className="w-full h-auto"
+            caption="About page — company profile & team"
           />
         </div>
         <figcaption className="mt-2.5 text-center text-[0.8rem] text-(--text-subtle)">
@@ -185,5 +189,6 @@ export default function WasemacCaseStudy() {
       </p>
 
     </article>
+    </LightboxProvider>
   );
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
+import LightboxProvider from "@/components/LightboxProvider";
+import LightboxImage from "@/components/LightboxImage";
 
 export const metadata: Metadata = {
   title: "Atlas Case Study | Bienvenu Cyuzuzo",
@@ -47,6 +48,7 @@ const TIMELINE = [
 
 export default function AtlasCaseStudy() {
   return (
+    <LightboxProvider>
     <article className="max-w-[720px] mx-auto mt-24 mb-24">
 
       {/* ── Back link ─────────────────────────────────────────── */}
@@ -111,12 +113,13 @@ export default function AtlasCaseStudy() {
           marginLeft: "calc(50% - min(45vw, 550px))",
         }}
       >
-        <Image
+        <LightboxImage
           src="/images/projects/atlas/atlas-homepage.png"
           alt="Atlas platform homepage"
           width={1100}
           height={733}
           className="w-full h-auto"
+          caption="Atlas platform homepage"
           priority
         />
       </div>
@@ -222,12 +225,13 @@ export default function AtlasCaseStudy() {
       {/* ── with-coaches photo ───────────────────────────────── */}
       <figure className="my-10">
         <div className="rounded-xl overflow-hidden border border-(--border-card)">
-          <Image
+          <LightboxImage
             src="/images/projects/atlas/with-coaches.jpg"
             alt="With Dutch mentors during Crunch Week"
             width={720}
             height={480}
             className="w-full h-auto"
+            caption="Crunch Week — with our Dutch mentors at The Gym, Kigali"
           />
         </div>
         <figcaption className="mt-2.5 text-center text-[0.8rem] text-(--text-subtle)">
@@ -261,12 +265,13 @@ export default function AtlasCaseStudy() {
       {/* ── Mentor discovery screenshot ──────────────────────── */}
       <figure className="my-10">
         <div className="rounded-xl overflow-hidden border border-(--border-card)">
-          <Image
+          <LightboxImage
             src="/images/projects/atlas/atlas-mentor-discovery.png"
             alt="Atlas mentor discovery screen"
             width={720}
             height={400}
             className="w-full h-auto"
+            caption="Mentor discovery — browse and connect with diaspora professionals"
           />
         </div>
         <figcaption className="mt-2.5 text-center text-[0.8rem] text-(--text-subtle)">
@@ -300,12 +305,13 @@ export default function AtlasCaseStudy() {
       <div className="grid grid-cols-2 gap-3 my-8 max-[500px]:grid-cols-1">
         <figure>
           <div className="rounded-xl overflow-hidden border border-(--border-card) h-[220px] max-[500px]:h-auto">
-            <Image
+            <LightboxImage
               src="/images/projects/atlas/atlas-presentation.jpg"
               alt="Presenting Atlas at Graduation Day"
               width={360}
               height={220}
               className="w-full h-full object-cover max-[500px]:h-auto max-[500px]:object-contain"
+              caption="Pitching Atlas to the judges"
             />
           </div>
           <figcaption className="mt-2 text-center text-[0.75rem] text-(--text-subtle)">
@@ -314,12 +320,13 @@ export default function AtlasCaseStudy() {
         </figure>
         <figure>
           <div className="rounded-xl overflow-hidden border border-(--border-card) h-[220px] max-[500px]:h-auto">
-            <Image
+            <LightboxImage
               src="/images/projects/atlas/prize.jpg"
               alt="Receiving 2nd place at Code2Unlock"
               width={360}
               height={220}
               className="w-full h-full object-cover max-[500px]:h-auto max-[500px]:object-contain"
+              caption="Receiving 2nd place — Code2Unlock 2025"
             />
           </div>
           <figcaption className="mt-2 text-center text-[0.75rem] text-(--text-subtle)">
@@ -371,5 +378,6 @@ export default function AtlasCaseStudy() {
       </p>
 
     </article>
+    </LightboxProvider>
   );
 }

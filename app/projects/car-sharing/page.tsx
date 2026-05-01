@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
+import LightboxProvider from "@/components/LightboxProvider";
+import LightboxImage from "@/components/LightboxImage";
 
 export const metadata: Metadata = {
   title: "Moni Share Case Study | Bienvenu Cyuzuzo",
@@ -21,6 +22,7 @@ const REVIEW_STAGES = ["Peer Review", "Coach Review", "Senior Review"];
 
 export default function MoniShareCaseStudy() {
   return (
+    <LightboxProvider>
     <article className="max-w-[720px] mx-auto mt-24 mb-24">
 
       {/* ── Back link ─────────────────────────────────────────── */}
@@ -55,12 +57,13 @@ export default function MoniShareCaseStudy() {
           marginLeft: "calc(50% - min(45vw, 550px))",
         }}
       >
-        <Image
+        <LightboxImage
           src="/images/projects/car-sharing/welcome-page.png"
           alt="Moni Share welcome page"
           width={1100}
           height={733}
           className="w-full h-auto"
+          caption="Moni Share welcome page"
           priority
         />
       </div>
@@ -221,12 +224,13 @@ export default function MoniShareCaseStudy() {
       {/* available-cars screenshot */}
       <figure className="my-10">
         <div className="rounded-xl overflow-hidden border border-(--border-card)">
-          <Image
+          <LightboxImage
             src="/images/projects/car-sharing/available-cars.png"
             alt="Available cars listing screen"
             width={720}
             height={420}
             className="w-full h-auto"
+            caption="Available cars — browse and filter listings"
           />
         </div>
         <figcaption className="mt-2.5 text-center text-[0.8rem] text-(--text-subtle)">
@@ -238,12 +242,13 @@ export default function MoniShareCaseStudy() {
       <div className="grid grid-cols-2 gap-3 my-8 max-[500px]:grid-cols-1">
         <figure>
           <div className="rounded-xl overflow-hidden border border-(--border-card)">
-            <Image
+            <LightboxImage
               src="/images/projects/car-sharing/booking-accepted.png"
               alt="Booking accepted confirmation screen"
               width={360}
               height={300}
               className="w-full h-auto"
+              caption="Booking confirmed"
             />
           </div>
           <figcaption className="mt-2 text-center text-[0.75rem] text-(--text-subtle)">
@@ -252,12 +257,13 @@ export default function MoniShareCaseStudy() {
         </figure>
         <figure>
           <div className="rounded-xl overflow-hidden border border-(--border-card)">
-            <Image
+            <LightboxImage
               src="/images/projects/car-sharing/my-bookings.png"
               alt="My bookings screen"
               width={360}
               height={300}
               className="w-full h-auto"
+              caption="My bookings — driver view"
             />
           </div>
           <figcaption className="mt-2 text-center text-[0.75rem] text-(--text-subtle)">
@@ -283,12 +289,13 @@ export default function MoniShareCaseStudy() {
       {/* manage-bookings screenshot */}
       <figure className="my-10">
         <div className="rounded-xl overflow-hidden border border-(--border-card)">
-          <Image
+          <LightboxImage
             src="/images/projects/car-sharing/manage-bookings.png"
             alt="Manage bookings screen"
             width={720}
             height={420}
             className="w-full h-auto"
+            caption="Manage bookings — car owner view"
           />
         </div>
         <figcaption className="mt-2.5 text-center text-[0.8rem] text-(--text-subtle)">
@@ -368,5 +375,6 @@ export default function MoniShareCaseStudy() {
       </p>
 
     </article>
+    </LightboxProvider>
   );
 }

@@ -51,6 +51,15 @@ const PROJECTS = [
     slug: "atlas",
     gradient: "linear-gradient(135deg, #2e1065 0%, #7c3aed 100%)",
   },
+  {
+    num: "04",
+    name: "CBC-ALU",
+    desc: "Official site for the Claude Builder Club at ALU — events, gallery, slides, and resources for the campus AI community.",
+    tags: ["React", "TypeScript", "Tailwind"],
+    live: "https://cbc-alu.vercel.app/",
+    slug: "cbc-alu",
+    gradient: "linear-gradient(135deg, #431407 0%, #c2410c 100%)",
+  },
 ];
 
 export default function Home() {

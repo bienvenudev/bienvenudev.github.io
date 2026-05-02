@@ -45,6 +45,7 @@ export default function RootLayout({
         <link rel="manifest" href="/favicon/site.webmanifest" />
 
         {/* Devicons — tech logo icon font */}
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" />
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"

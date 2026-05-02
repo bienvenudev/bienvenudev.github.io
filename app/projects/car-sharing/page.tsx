@@ -20,6 +20,8 @@ const META = [
 const TRELLO_STAGES = ["Backlog", "Ready", "In Progress", "In Review", "Done"];
 const REVIEW_STAGES = ["Peer Review", "Coach Review", "Senior Review"];
 
+const lnk = "underline underline-offset-[3px] decoration-current/35 hover:decoration-(--accent) transition-colors";
+
 export default function MoniShareCaseStudy() {
   return (
     <LightboxProvider>
@@ -42,7 +44,10 @@ export default function MoniShareCaseStudy() {
           Moni Share
         </h1>
         <p className="text-(--text-muted) text-lg font-medium">
-          Car sharing platform — The Gym, Kigali
+          Car sharing platform —{" "}
+          <a href="https://www.the-gym.rw/" target="_blank" rel="noopener noreferrer"
+             className={lnk}>The Gym</a>
+          , Kigali
         </p>
         <p className="text-sm text-(--text-subtle) mt-2">
           Private repository · No public deployment
@@ -85,7 +90,9 @@ export default function MoniShareCaseStudy() {
         Overview
       </h2>
       <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
-        Moni Share is a car sharing web application built as part of The Gym&apos;s
+        Moni Share is a car sharing web application built as part of{" "}
+        <a href="https://www.the-gym.rw/" target="_blank" rel="noopener noreferrer"
+           className={`font-semibold ${lnk}`}>The Gym</a>&apos;s
         curriculum in Kigali. It&apos;s a platform where car owners can list their
         vehicles and others can browse and book them.
       </p>
@@ -315,11 +322,13 @@ export default function MoniShareCaseStudy() {
         each with clearly defined responsibilities.
       </p>
       <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
-        The architect, Raphael Pigulla from MaibornWolff (a German software company),
-        recorded a walkthrough explaining the design decisions. We had to watch it and
-        work through the structure before writing a single line. It took time — but it
-        gave me a much better mental model of what &ldquo;enterprise backend&rdquo; actually
-        means in practice.
+        The architect, Raphael Pigulla from{" "}
+        <a href="https://www.maibornwolff.de/en/" target="_blank" rel="noopener noreferrer"
+           className={`font-semibold ${lnk}`}>MaibornWolff</a>{" "}
+        (a German software company), recorded a walkthrough explaining the design
+        decisions. We had to watch it and work through the structure before writing
+        a single line. It took time — but it gave me a much better mental model of
+        what &ldquo;enterprise backend&rdquo; actually means in practice.
       </p>
 
       {/* ── A Moment Worth Remembering ───────────────────────── */}
@@ -333,10 +342,13 @@ export default function MoniShareCaseStudy() {
         stale data before the backend had finished updating.
       </p>
       <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
-        One teammate suggested TanStack Query. Its cache invalidation approach solved
-        the problem cleanly — after a mutation, you invalidate the relevant query and
-        the UI updates automatically. I picked it up from that conversation, and it&apos;s
-        been part of how I think about data fetching ever since.
+        One teammate suggested{" "}
+        <a href="https://tanstack.com/query" target="_blank" rel="noopener noreferrer"
+           className={`font-semibold ${lnk}`}>TanStack Query</a>.
+        Its cache invalidation approach solved the problem cleanly — after a mutation,
+        you invalidate the relevant query and the UI updates automatically. I picked
+        it up from that conversation, and it&apos;s been part of how I think about data
+        fetching ever since.
       </p>
       <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
         That&apos;s something team environments do that solo work doesn&apos;t — you pick up
@@ -349,7 +361,11 @@ export default function MoniShareCaseStudy() {
       </h2>
       <ul className="pl-6 mb-4 text-(--text-muted) list-disc">
         <li className="mb-[0.4rem] leading-[1.7]">React &amp; TypeScript — component-based frontend</li>
-        <li className="mb-[0.4rem] leading-[1.7]">TanStack Query — server state management &amp; cache invalidation</li>
+        <li className="mb-[0.4rem] leading-[1.7]">
+          <a href="https://tanstack.com/query" target="_blank" rel="noopener noreferrer"
+             className={lnk}>TanStack Query</a>{" "}
+          — server state management &amp; cache invalidation
+        </li>
         <li className="mb-[0.4rem] leading-[1.7]">NestJS — layered backend architecture</li>
         <li className="mb-[0.4rem] leading-[1.7]">PostgreSQL — relational database</li>
         <li className="mb-[0.4rem] leading-[1.7]">Docker — containerized services</li>

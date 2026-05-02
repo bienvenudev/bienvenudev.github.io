@@ -46,6 +46,8 @@ const TIMELINE = [
   },
 ];
 
+const lnk = "underline underline-offset-[3px] decoration-current/35 hover:decoration-(--accent) transition-colors";
+
 export default function AtlasCaseStudy() {
   return (
     <LightboxProvider>
@@ -142,10 +144,15 @@ export default function AtlasCaseStudy() {
       </h2>
       <p className="text-(--text-muted) leading-[1.8] mb-4">
         We were one of 32 teams that participated in the{" "}
-        <strong className="text-(--text)">Code2Unlock Hackathon</strong> — a multi-week
-        sprint run by Code2Unlock Skills &amp; Jobs in Kigali. Our team picked up{" "}
+        <a href="https://code2unlock.org/" target="_blank" rel="noopener noreferrer"
+           className={`font-bold ${lnk}`}>Code2Unlock Hackathon</a>{" "}
+        — a multi-week sprint run by{" "}
+        <a href="https://code2unlock.org/" target="_blank" rel="noopener noreferrer"
+           className={lnk}>Code2Unlock Skills &amp; Jobs</a>{" "}
+        in Kigali. Our team picked up{" "}
         <strong className="text-(--text)">Challenge 2</strong>, posed by{" "}
-        <strong className="text-(--text)">SolvitAfrica</strong>:
+        <a href="https://solvit.africa/" target="_blank" rel="noopener noreferrer"
+           className={`font-bold ${lnk}`}>SolvitAfrica</a>:
       </p>
       <blockquote
         className="my-6 pl-5 border-l-[3px] border-(--accent)"
@@ -160,7 +167,16 @@ export default function AtlasCaseStudy() {
           meaningful employment?&rdquo;
         </p>
         <cite className="block mt-2 text-sm text-(--text-subtle) not-italic">
-          — SolvitAfrica, Code2Unlock Hackathon 2025
+          —{" "}
+          <a href="https://solvit.africa/" target="_blank" rel="noopener noreferrer"
+             className={lnk}>
+            SolvitAfrica
+          </a>
+          ,{" "}
+          <a href="https://code2unlock.org/" target="_blank" rel="noopener noreferrer"
+             className={lnk}>
+            Code2Unlock Hackathon 2025
+          </a>
         </cite>
       </blockquote>
 
@@ -184,8 +200,10 @@ export default function AtlasCaseStudy() {
         The Sprint
       </h2>
       <p className="text-(--text-muted) leading-[1.8] mb-4">
-        This wasn&apos;t a 48-hour hackathon. Code2Unlock ran over nearly four weeks,
-        with multiple structured phases:
+        This wasn&apos;t a 48-hour hackathon.{" "}
+        <a href="https://code2unlock.org/" target="_blank" rel="noopener noreferrer"
+           className={lnk}>Code2Unlock</a>{" "}
+        ran over nearly four weeks, with multiple structured phases:
       </p>
 
       {/* Timeline */}
@@ -235,7 +253,10 @@ export default function AtlasCaseStudy() {
           />
         </div>
         <figcaption className="mt-2.5 text-center text-[0.8rem] text-(--text-subtle)">
-          Crunch Week — with our Dutch mentors at The Gym, Kigali
+          Crunch Week — with our Dutch mentors at{" "}
+          <a href="https://www.the-gym.rw/" target="_blank" rel="noopener noreferrer"
+             className={lnk}>The Gym</a>
+          , Kigali
         </figcaption>
       </figure>
 
@@ -296,8 +317,10 @@ export default function AtlasCaseStudy() {
       </h2>
       <p className="text-(--text-muted) leading-[1.8] mb-6">
         On September 19th — Graduation Day — we pitched Atlas to a panel of judges
-        and challenge owners at The Gym, Kigali. Out of 7 finalists (chosen from 32
-        teams), we placed{" "}
+        and challenge owners at{" "}
+        <a href="https://www.the-gym.rw/" target="_blank" rel="noopener noreferrer"
+           className={lnk}>The Gym</a>
+        , Kigali. Out of 7 finalists (chosen from 32 teams), we placed{" "}
         <strong className="text-(--text)">2nd</strong>.
       </p>
 
@@ -330,7 +353,9 @@ export default function AtlasCaseStudy() {
             />
           </div>
           <figcaption className="mt-2 text-center text-[0.75rem] text-(--text-subtle)">
-            Receiving 2nd place — Code2Unlock 2025
+            Receiving 2nd place —{" "}
+            <a href="https://code2unlock.org/" target="_blank" rel="noopener noreferrer"
+               className={lnk}>Code2Unlock 2025</a>
           </figcaption>
         </figure>
       </div>

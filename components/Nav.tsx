@@ -4,16 +4,17 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 
 const NAV_LINKS = [
-  { href: "/#About", label: "About" },
-  { href: "/#Skills", label: "Skills" },
-  { href: "/#Background", label: "Background" },
-  { href: "/#Projects", label: "Projects" },
+  { href: "/#About",      label: "About",      sectionId: "About"      },
+  { href: "/#Projects",   label: "Projects",   sectionId: "Projects"   },
+  { href: "/#Skills",     label: "Skills",     sectionId: "Skills"     },
+  { href: "/#Background", label: "Background", sectionId: "Background" },
 ];
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isDark, setIsDark] = useState<boolean | null>(null);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("About");
   const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -22,6 +23,26 @@ export default function Nav() {
     const onScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Track active section — fires when a section crosses the middle band of the viewport
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+
+    NAV_LINKS.forEach(({ sectionId }) => {
+      const el = document.getElementById(sectionId);
+      if (!el) return;
+      const obs = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) setActiveSection(sectionId);
+        },
+        { rootMargin: "-40% 0px -50% 0px" }
+      );
+      obs.observe(el);
+      observers.push(obs);
+    });
+
+    return () => observers.forEach((o) => o.disconnect());
   }, []);
 
   // Close on Escape key
@@ -66,8 +87,12 @@ export default function Nav() {
 
           {/* Desktop links */}
           <nav className="nav-links" aria-label="Primary navigation">
-            {NAV_LINKS.map(({ href, label }) => (
-              <Link key={href} href={href} className="nav-link">
+            {NAV_LINKS.map(({ href, label, sectionId }) => (
+              <Link
+                key={href}
+                href={href}
+                className={`nav-link${activeSection === sectionId ? " nav-link--active" : ""}`}
+              >
                 {label}
               </Link>
             ))}
@@ -149,11 +174,11 @@ export default function Nav() {
         </button>
 
         <nav>
-          {NAV_LINKS.map(({ href, label }) => (
+          {NAV_LINKS.map(({ href, label, sectionId }) => (
             <Link
               key={href}
               href={href}
-              className="mobile-nav-link"
+              className={`mobile-nav-link${activeSection === sectionId ? " mobile-nav-link--active" : ""}`}
               onClick={closeMenu}
             >
               {label}

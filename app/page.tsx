@@ -100,16 +100,16 @@ export default function Home() {
                 href="https://alueducation.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-(--text) font-semibold underline underline-offset-[3px] decoration-(--border-card) hover:decoration-(--accent) transition-colors"
-              >
-                ALU
-              </a>{" "}
-              &amp; training at{" "}
-              <a
-                href="https://www.the-gym.rw/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-(--text) font-semibold underline underline-offset-[3px] decoration-(--border-card) hover:decoration-(--accent) transition-colors"
+              className="text-(--text) font-semibold underline underline-offset-[3px] decoration-current/35 hover:decoration-(--accent) transition-colors"
+            >
+              ALU
+            </a>{" "}
+            &amp; training at{" "}
+            <a
+              href="https://www.the-gym.rw/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-(--text) font-semibold underline underline-offset-[3px] decoration-current/35 hover:decoration-(--accent) transition-colors"
               >
                 The Gym
               </a>

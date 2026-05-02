@@ -11,9 +11,9 @@ const ibmPlex = IBM_Plex_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Bienvenu Cyuzuzo | Software Developer",
+  title: "Bienvenu Cyuzuzo | Software Engineer",
   description:
-    "Portfolio of Bienvenu Cyuzuzo, a software engineering student and web developer from Rwanda, focused on web accessibility (A11Y).",
+    "Portfolio of Bienvenu Cyuzuzo, a software engineering student and developer from Rwanda building accessible, performant products.",
 };
 
 export default function RootLayout({

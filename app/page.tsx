@@ -87,7 +87,7 @@ export default function Home() {
             {/* Heading */}
             <h1 className="text-(length:--text-hero) font-black tracking-[-0.04em] leading-[1.05] text-(--text)">
               Hi, I&apos;m Bienvenu.<br />
-              <span className="text-(--accent)">Frontend Dev.</span>
+              <span className="text-(--accent)">Software Engineer.</span>
             </h1>
 
             {/* Bio */}

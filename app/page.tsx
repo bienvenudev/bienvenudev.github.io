@@ -236,14 +236,14 @@ export default function Home() {
                 className="flex flex-col items-center gap-2 mx-4"
               >
                 <div
-                  className="w-20 h-20 rounded-xl flex items-center justify-center"
+                  className="w-11 h-11 rounded-lg flex items-center justify-center"
                   style={{ background: darkInvert ? "var(--skill-mono-bg)" : "var(--bg-card)" }}
                 >
                   {icon.startsWith("https://") ? (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={icon} alt="" width={54} height={54} style={darkInvert ? { filter: "var(--skill-mono-filter)" } : undefined} aria-hidden="true" />
+                    <img src={icon} alt="" width={30} height={30} style={darkInvert ? { filter: "var(--skill-mono-filter)" } : undefined} aria-hidden="true" />
                   ) : (
-                    <i className={`${icon} text-[2.50rem]`} aria-hidden="true" />
+                    <i className={`${icon} text-[1.4rem]`} aria-hidden="true" />
                   )}
                 </div>
                 <span className="text-xs text-(--text-muted) whitespace-nowrap">

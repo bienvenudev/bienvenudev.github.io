@@ -89,7 +89,10 @@ export default function AtlasCaseStudy() {
           >
             GitHub ↗
           </a>
-        </div>
+          </div>
+          <p className="text-sm text-(--text-muted) mt-2">
+            No sign-up needed — the demo lets you explore as a pre-filled user.
+          </p>
       </div>
 
       {/* ── Hero screenshot — bleeds wider than the prose column ─ */}

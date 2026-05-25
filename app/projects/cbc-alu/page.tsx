@@ -33,21 +33,6 @@ export default function CbcAluCaseStudy() {
           ← Back to Projects
         </Link>
 
-        {/* ── Context badge ────────────────────────────────────── */}
-        <div className="flex justify-center mb-6">
-          <span
-            className="inline-flex items-center gap-2 text-sm font-semibold
-                     px-4 py-1.5 rounded-full border"
-            style={{
-              background: "rgba(194,65,12,0.10)",
-              color: "#c2410c",
-              borderColor: "rgba(194,65,12,0.3)",
-            }}
-          >
-            🤖 Anthropic · Claude Builder Clubs
-          </span>
-        </div>
-
         {/* ── Header ───────────────────────────────────────────── */}
         <div className="text-center mb-10">
           <h1 className="text-[clamp(3rem,8vw,5rem)] font-black tracking-[-0.04em]

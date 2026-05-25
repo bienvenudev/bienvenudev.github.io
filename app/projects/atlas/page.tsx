@@ -63,21 +63,6 @@ export default function AtlasCaseStudy() {
         ← Back to Projects
       </Link>
 
-      {/* ── Achievement badge ────────────────────────────────── */}
-      <div className="flex justify-center mb-6">
-        <span
-          className="inline-flex items-center gap-2 text-sm font-semibold
-                     px-4 py-1.5 rounded-full border"
-          style={{
-            background: "rgba(234,179,8,0.12)",
-            color: "#b45309",
-            borderColor: "rgba(234,179,8,0.3)",
-          }}
-        >
-          🏆 2nd Place — Code2Unlock Hackathon 2025
-        </span>
-      </div>
-
       {/* ── Header ───────────────────────────────────────────── */}
       <div className="text-center mb-10">
         <h1 className="text-[clamp(3rem,8vw,5rem)] font-black tracking-[-0.04em]

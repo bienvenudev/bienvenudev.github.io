@@ -3,24 +3,24 @@ import Link from "next/link";
 import SocialLinks from "@/components/SocialLinks";
 
 const SKILLS = [
-  { name: "HTML5",       icon: "devicon-html5-plain colored" },
-  { name: "CSS",        icon: "https://raw.githubusercontent.com/CSS-Next/logo.css/48f24dccd4e169118d17bab998c3d276e95167df/css.svg" },
-  { name: "Tailwind",    icon: "devicon-tailwindcss-plain colored" },
-  { name: "JavaScript",  icon: "devicon-javascript-plain colored" },
-  { name: "TypeScript",  icon: "devicon-typescript-plain colored" },
-  { name: "React",       icon: "devicon-react-original colored" },
-  { name: "Next.js",     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg", darkInvert: true },
-  { name: "Node.js",     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" },
-  { name: "NestJS",      icon: "devicon-nestjs-plain colored" },
-  { name: "Git",         icon: "devicon-git-plain colored" },
-  { name: "GitHub",      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg", darkInvert: true },
-  { name: "MongoDB",     icon: "devicon-mongodb-plain colored" },
-  { name: "PostgreSQL",  icon: "devicon-postgresql-plain colored" },
-  { name: "Docker",      icon: "devicon-docker-plain colored" },
-  { name: "VSCode",      icon: "devicon-vscode-plain colored" },
-  { name: "Linux",       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" },
-  { name: "Vite",        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" },
-  { name: "npm",         icon: "devicon-npm-original-wordmark colored" },
+  { name: "HTML5", icon: "devicon-html5-plain colored" },
+  { name: "CSS", icon: "https://raw.githubusercontent.com/CSS-Next/logo.css/48f24dccd4e169118d17bab998c3d276e95167df/css.svg" },
+  { name: "Tailwind", icon: "devicon-tailwindcss-plain colored" },
+  { name: "JavaScript", icon: "devicon-javascript-plain colored" },
+  { name: "TypeScript", icon: "devicon-typescript-plain colored" },
+  { name: "React", icon: "devicon-react-original colored" },
+  { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg", darkInvert: true },
+  { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" },
+  { name: "NestJS", icon: "devicon-nestjs-plain colored" },
+  { name: "Git", icon: "devicon-git-plain colored" },
+  { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg", darkInvert: true },
+  { name: "MongoDB", icon: "devicon-mongodb-plain colored" },
+  { name: "PostgreSQL", icon: "devicon-postgresql-plain colored" },
+  { name: "Docker", icon: "devicon-docker-plain colored" },
+  { name: "VSCode", icon: "devicon-vscode-plain colored" },
+  { name: "Linux", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" },
+  { name: "Vite", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" },
+  { name: "npm", icon: "devicon-npm-original-wordmark colored" },
 ];
 
 const PROJECTS = [
@@ -100,16 +100,16 @@ export default function Home() {
                 href="https://alueducation.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-              className="text-(--text) font-semibold underline underline-offset-[3px] decoration-current/35 hover:decoration-(--accent) transition-colors"
-            >
-              ALU
-            </a>{" "}
-            &amp; training at{" "}
-            <a
-              href="https://www.the-gym.rw/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-(--text) font-semibold underline underline-offset-[3px] decoration-current/35 hover:decoration-(--accent) transition-colors"
+                className="text-(--text) font-semibold underline underline-offset-[3px] decoration-current/35 hover:decoration-(--accent) transition-colors"
+              >
+                ALU
+              </a>{" "}
+              &amp; training at{" "}
+              <a
+                href="https://www.the-gym.rw/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-(--text) font-semibold underline underline-offset-[3px] decoration-current/35 hover:decoration-(--accent) transition-colors"
               >
                 The Gym
               </a>
@@ -219,12 +219,12 @@ export default function Home() {
         <div className="relative overflow-hidden marquee-wrap">
           {/* Left fade */}
           <div
-            className="absolute inset-y-0 left-0 w-20 bg-linear-to-r from-(--bg) to-transparent z-10 pointer-events-none"
+            className="absolute inset-y-0 left-0 w-6 md:w-20 bg-linear-to-r from-(--bg) to-transparent z-10 pointer-events-none"
             aria-hidden="true"
           />
           {/* Right fade */}
           <div
-            className="absolute inset-y-0 right-0 w-20 bg-linear-to-l from-(--bg) to-transparent z-10 pointer-events-none"
+            className="absolute inset-y-0 right-0 w-6 md:w-20 bg-linear-to-l from-(--bg) to-transparent z-10 pointer-events-none"
             aria-hidden="true"
           />
 
@@ -233,10 +233,10 @@ export default function Home() {
             {[...SKILLS, ...SKILLS].map(({ name, icon, darkInvert }, i) => (
               <div
                 key={i}
-                className="flex flex-col items-center gap-2 mx-4"
+                className="flex flex-col items-center gap-2 mx-2 sm:mx-4"
               >
                 <div
-                  className="w-11 h-11 rounded-lg flex items-center justify-center"
+                  className="w-8 h-8 sm:w-11 sm:h-11 rounded-lg flex items-center justify-center"
                   style={{ background: darkInvert ? "var(--skill-mono-bg)" : "var(--bg-card)" }}
                 >
                   {icon.startsWith("https://") ? (
@@ -285,7 +285,7 @@ export default function Home() {
               <span className="text-[0.72rem] font-bold uppercase tracking-[0.08em] text-(--accent)">
                 Education
               </span>
-              <div className="flex items-baseline justify-between gap-4 mt-0.5">
+              <div className="flex items-baseline justify-between gap-4 mt-0.5 max-sm:flex-col max-sm:gap-0.5">
                 <h3 className="text-[1.05rem] font-bold tracking-[-0.02em] text-(--text)">
                   BSc. (Hons) Software Engineering
                 </h3>
@@ -334,7 +334,7 @@ export default function Home() {
               <span className="text-[0.72rem] font-bold uppercase tracking-[0.08em] text-(--accent)">
                 Experience
               </span>
-              <div className="flex items-baseline justify-between gap-4 mt-0.5">
+              <div className="flex items-baseline justify-between gap-4 mt-0.5 max-sm:flex-col max-sm:gap-0.5">
                 <h3 className="text-[1.05rem] font-bold tracking-[-0.02em] text-(--text)">
                   Software Developer Trainee
                 </h3>

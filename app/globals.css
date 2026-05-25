@@ -100,8 +100,8 @@ button {
 
 /* ── Base ───────────────────────────────────────────────────── */
 html {
-  font-size: 137.5%;            /* 22px base ≈ 150% zoom feel; all rem values scale */
-  scroll-padding-top: 100px;   /* keeps anchors clear of the taller scaled nav */
+  font-size: 137.5%;            /* 22px base — all rem values scale from here */
+  scroll-padding-top: 100px;   /* keeps anchors clear of the fixed nav */
 }
 
 body {

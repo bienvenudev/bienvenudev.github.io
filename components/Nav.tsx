@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const NAV_LINKS = [
   { href: "/#About",      label: "About",      sectionId: "About"      },
@@ -14,8 +15,12 @@ export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isDark, setIsDark] = useState<boolean | null>(null);
   const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState<string>("About");
+  // scrollSection tracks which home-page section is in view via IntersectionObserver.
+  // activeSection is derived: show it only when on the home page.
+  const [scrollSection, setScrollSection] = useState<string>("About");
   const menuRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
+  const activeSection = pathname === "/" ? scrollSection : "";
 
   useEffect(() => {
     setIsDark(document.documentElement.classList.contains("dark"));
@@ -25,8 +30,13 @@ export default function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Track active section — fires when a section crosses the middle band of the viewport
+  // Track active section — re-runs on every route change so we always observe
+  // the freshly-mounted section elements (navigating away/back recreates them).
+  // setScrollSection is only called inside observer callbacks or cleanup — never
+  // synchronously in the effect body — so the lint rule is satisfied.
   useEffect(() => {
+    if (pathname !== "/") return; // activeSection is derived as "" on non-home pages
+
     const observers: IntersectionObserver[] = [];
 
     NAV_LINKS.forEach(({ sectionId }) => {
@@ -34,7 +44,7 @@ export default function Nav() {
       if (!el) return;
       const obs = new IntersectionObserver(
         ([entry]) => {
-          if (entry.isIntersecting) setActiveSection(sectionId);
+          if (entry.isIntersecting) setScrollSection(sectionId);
         },
         { rootMargin: "-40% 0px -50% 0px" }
       );
@@ -42,8 +52,12 @@ export default function Nav() {
       observers.push(obs);
     });
 
-    return () => observers.forEach((o) => o.disconnect());
-  }, []);
+    return () => {
+      observers.forEach((o) => o.disconnect());
+      // Reset so that navigating back to home always starts from "About"
+      setScrollSection("About");
+    };
+  }, [pathname]);
 
   // Close on Escape key
   useEffect(() => {

@@ -102,7 +102,7 @@ export default function WasemacCaseStudy() {
         Without a website, Wasemac struggled to demonstrate their project
         portfolio and technical expertise to prospective clients who increasingly
         look for this information online before making procurement decisions.
-        The site needed to feel professional and trustworthy — appropriate for
+        The site needed to feel professional and trustworthy, appropriate for
         a company bidding on large infrastructure contracts.
       </p>
 
@@ -156,27 +156,6 @@ export default function WasemacCaseStudy() {
         <li className="mb-[0.4rem] leading-[1.7]">Responsive design patterns for mobile-first layout</li>
       </ul>
 
-      {/* ── Challenges ───────────────────────────────────────── */}
-      <h2 className="text-[1.1rem] font-bold text-(--accent) mt-10 mb-3 tracking-[-0.01em]">
-        Challenges &amp; Solutions
-      </h2>
-      <div className="my-6 py-4 px-5 border-l-[3px] border-(--accent) bg-(--accent-dim) rounded-r-lg text-sm text-(--text-muted)">
-        ✏️ <strong>Fill this in:</strong> What were the specific design or
-        technical challenges? E.g., communicating technical services to a
-        non-technical audience, working with limited content from the client,
-        image-heavy portfolio pages and performance trade-offs.
-      </div>
-
-      {/* ── Outcomes ─────────────────────────────────────────── */}
-      <h2 className="text-[1.1rem] font-bold text-(--accent) mt-10 mb-3 tracking-[-0.01em]">
-        Outcomes
-      </h2>
-      <div className="my-6 py-4 px-5 border-l-[3px] border-(--accent) bg-(--accent-dim) rounded-r-lg text-sm text-(--text-muted)">
-        ✏️ <strong>Fill this in:</strong> Did the site lead to new business
-        inquiries? Did the client report positive feedback from partners?
-        Add any qualitative or quantitative results here.
-      </div>
-
       {/* ── Learnings ────────────────────────────────────────── */}
       <h2 className="text-[1.1rem] font-bold text-(--accent) mt-10 mb-3 tracking-[-0.01em]">
         What I Learned
@@ -184,8 +163,8 @@ export default function WasemacCaseStudy() {
       <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
         Corporate sites require a different tone and information architecture
         than consumer products. This project taught me how to design for trust
-        and credibility — using whitespace, typography, and structure to signal
-        professionalism — rather than just building a technically functional site.
+        and credibility using whitespace, typography, and structure to signal
+        professionalism rather than just building a technically functional site.
       </p>
 
     </article>

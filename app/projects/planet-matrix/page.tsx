@@ -135,12 +135,14 @@ export default function PlanetMatrixCaseStudy() {
         My Role
       </h2>
       <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
-        I&apos;ve built solo for clients before, but on PlanetMatrix I owned the{" "}
-        <em>design</em> end to end alongside the engineering, starting from a
-        blank canvas instead of a handed-off mockup. Every decision was mine:
-        colour palette, typography, logo treatment, component layout, <em>and</em>{" "}
-        the code that implemented it. If a section didn&apos;t feel trustworthy,
-        there was no one to blame and no one to fix it but me.
+        I&apos;ve built solo for clients before, but on PlanetMatrix I handled the
+        design and the engineering together, with no handed-off mockup to work
+        from. With no Figma file to follow, I shaped the visual direction myself,
+        studying how existing products in the climate and ESG space present
+        themselves so the result would feel credible to the people who already use
+        these tools. The palette, typography, logo treatment, and layout were mine
+        to decide, along with the code behind them. If a section didn&apos;t feel
+        trustworthy, there was no one to blame and no one to fix it but me.
       </p>
 
       {/* ── What I Built ─────────────────────────────────────── */}
@@ -150,7 +152,7 @@ export default function PlanetMatrixCaseStudy() {
       <ul className="pl-6 mb-4 text-(--text-muted) list-disc">
         <li className="mb-[0.4rem] leading-[1.7]">A full single-page marketing site with fixed navigation, an animated hero, and smooth-scroll sections</li>
         <li className="mb-[0.4rem] leading-[1.7]">An interactive &ldquo;How It Works&rdquo; section with four tabbed panels (Collect → Analyze → Act → Report), each with its own custom dashboard visualization</li>
-        <li className="mb-[0.4rem] leading-[1.7]">Four bespoke dark-themed dashboards: a live data-source table, an AI risk-analysis panel, a geographic intelligence map, and a compliance reporting view</li>
+        <li className="mb-[0.4rem] leading-[1.7]">Four custom dark-themed dashboards: a live data-source table, an AI risk-analysis panel, a geographic intelligence map, and a compliance reporting view</li>
         <li className="mb-[0.4rem] leading-[1.7]">A capabilities grid, a three-step compliance journey, a frameworks section, and an impact-pillars layout</li>
         <li className="mb-[0.4rem] leading-[1.7]">A fully functional &ldquo;Book a Demo&rdquo; form wired to a real email-delivery backend</li>
         <li className="mb-[0.4rem] leading-[1.7]">A complete deployment pipeline: custom domain, DNS, and transactional email</li>
@@ -253,19 +255,6 @@ export default function PlanetMatrixCaseStudy() {
       </p>
 
       <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
-        <strong className="text-(--text)">Tailwind v4, the hard way.</strong>{" "}
-        Midway through, I migrated the entire site from vanilla CSS to{" "}
-        <a href="https://tailwindcss.com/blog/tailwindcss-v4" target="_blank" rel="noopener noreferrer"
-           className={lnk}>Tailwind v4</a>.
-        The version matters: v4 dropped the old <code>@tailwind</code> directives for a single{" "}
-        <code>@import &quot;tailwindcss&quot;</code>, changed how arbitrary values and font
-        families work, and removed config-file assumptions I&apos;d taken for granted.
-        Several classes that &ldquo;should&rdquo; have worked silently failed until I traced
-        them back to v4&apos;s new conventions. A good lesson in not trusting muscle
-        memory across a major version.
-      </p>
-
-      <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
         <strong className="text-(--text)">Email that actually sends.</strong>{" "}
         The &ldquo;Book a Demo&rdquo; form needed to deliver real emails from a branded
         domain. I set up{" "}
@@ -273,7 +262,7 @@ export default function PlanetMatrixCaseStudy() {
            className={lnk}>Resend</a>{" "}
         for transactional email, verified the domain via DNS records, and built a
         Next.js API route to handle submissions. The recurring gotcha: environment
-        variables only take effect on <em>new</em> deployments, so the form kept
+        variables only take effect on <em>new</em>{" "}deployments, so the form kept
         failing in production until I learned to always redeploy after touching
         secrets, and to read the API&apos;s JSON error response instead of guessing.
       </p>
@@ -323,7 +312,7 @@ export default function PlanetMatrixCaseStudy() {
         What I Learned
       </h2>
       <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
-        The biggest shift was realizing how much design <em>is</em> engineering when
+        The biggest shift was realizing how much design <em>is</em>{" "}engineering when
         you&apos;re solo. I couldn&apos;t hide behind &ldquo;the mockup said so.&rdquo; Every spacing
         choice, every contrast decision, every &ldquo;does this dashboard look real enough
         to trust&rdquo; judgment was mine to own. It made me a more deliberate developer.
@@ -334,12 +323,6 @@ export default function PlanetMatrixCaseStudy() {
         Writing the UI was the fun part; getting email to send reliably from a custom
         domain in production taught me more about how the web actually fits together
         than any component ever did.
-      </p>
-      <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
-        And I learned to respect version changes. The Tailwind v3-to-v4 migration
-        looked like a find-and-replace job and turned out to be a genuine relearning
-        of how the tool works. &ldquo;It works on my machine&rdquo; usually means &ldquo;I haven&apos;t
-        read the changelog yet.&rdquo;
       </p>
 
     </article>

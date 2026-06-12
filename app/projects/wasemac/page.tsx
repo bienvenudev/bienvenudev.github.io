@@ -38,7 +38,7 @@ export default function WasemacCaseStudy() {
           Wasemac
         </h1>
         <p className="text-(--text-muted) text-lg font-medium">
-          Water &amp; sewage engineering — Rwanda
+          Water &amp; sewage engineering · Rwanda
         </p>
         <a
           href="https://wasemacltd.com/"
@@ -138,11 +138,11 @@ export default function WasemacCaseStudy() {
             width={720}
             height={400}
             className="w-full h-auto"
-            caption="About page — company profile & team"
+            caption="About page: company profile & team"
           />
         </div>
         <figcaption className="mt-2.5 text-center text-[0.8rem] text-(--text-subtle)">
-          About page — company profile &amp; team
+          About page: company profile &amp; team
         </figcaption>
       </figure>
 
@@ -151,8 +151,8 @@ export default function WasemacCaseStudy() {
         Tech Stack
       </h2>
       <ul className="pl-6 mb-4 text-(--text-muted) list-disc">
-        <li className="mb-[0.4rem] leading-[1.7]">HTML5 &amp; CSS3 — semantic structure with custom styles</li>
-        <li className="mb-[0.4rem] leading-[1.7]">Vanilla JavaScript — interactive components</li>
+        <li className="mb-[0.4rem] leading-[1.7]">HTML5 &amp; CSS3: semantic structure with custom styles</li>
+        <li className="mb-[0.4rem] leading-[1.7]">Vanilla JavaScript: interactive components</li>
         <li className="mb-[0.4rem] leading-[1.7]">Responsive design patterns for mobile-first layout</li>
       </ul>
 

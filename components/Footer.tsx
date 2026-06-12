@@ -9,7 +9,7 @@ export default function Footer() {
         </span>
         <SocialLinks />
         <span className="text-[0.8rem] text-(--text-subtle)">
-          © {new Date().getFullYear()} — Built with Next.js
+          © {new Date().getFullYear()} · Built with Next.js
         </span>
       </div>
     </footer>

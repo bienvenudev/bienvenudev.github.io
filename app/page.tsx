@@ -27,7 +27,7 @@ const PROJECTS = [
   {
     num: "01",
     name: "PlanetMatrix",
-    desc: "Designed and built the marketing site for an AI-powered ESG & climate intelligence platform — from a blank canvas to a deployed, email-wired product.",
+    desc: "Designed and built the marketing site for an AI-powered ESG & climate intelligence platform, from a blank canvas to a deployed, email-wired product.",
     tags: ["Next.js", "TypeScript", "Tailwind v4", "Resend"],
     live: "https://www.planet-matrix.com/",
     slug: "planet-matrix",
@@ -63,7 +63,7 @@ const PROJECTS = [
   {
     num: "05",
     name: "CBC-ALU",
-    desc: "Official site for the Claude Builder Club at ALU — events, gallery, slides, and resources for the campus AI community.",
+    desc: "Official site for the Claude Builder Club at ALU: events, gallery, slides, and resources for the campus AI community.",
     tags: ["React", "TypeScript", "Tailwind"],
     live: "https://cbc-alu.tech/",
     slug: "cbc-alu",
@@ -311,7 +311,7 @@ export default function Home() {
                 >
                   African Leadership University
                 </a>{" "}
-                — Rwanda
+                · Rwanda
               </p>
               <p className="text-[0.9rem] text-(--text-muted) leading-[1.7] mt-3">
                 A software engineering programme in partnership with Holberton School,
@@ -360,7 +360,7 @@ export default function Home() {
                 >
                   The Gym
                 </a>{" "}
-                — Rwanda
+                · Rwanda
               </p>
               <p className="text-[0.9rem] text-(--text-muted) leading-[1.7] mt-3">
                 Intensive training programme with mentorship from international senior

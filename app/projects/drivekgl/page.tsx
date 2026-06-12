@@ -44,7 +44,7 @@ export default function DriveKGLCaseStudy() {
       <p>
         DriveKGL is a car rental service based in Kigali. The client needed a
         website that clearly communicated their available fleet, pricing, and
-        booking process — all without unnecessary complexity.
+        booking process, all without unnecessary complexity.
       </p>
 
       {/* Problem */}
@@ -58,7 +58,7 @@ export default function DriveKGLCaseStudy() {
       {/* Role */}
       <h2>My Role</h2>
       <p>
-        I handled the full project from initial brief to deployment — this
+        I handled the full project from initial brief to deployment. This
         included requirements gathering, design, development, and handoff.
       </p>
 
@@ -75,9 +75,9 @@ export default function DriveKGLCaseStudy() {
       {/* Tech stack */}
       <h2>Tech Stack</h2>
       <ul>
-        <li>HTML5 &amp; CSS3 — semantic markup and hand-crafted styles</li>
-        <li>Vanilla JavaScript — for interactive UI elements</li>
-        <li>No frameworks — kept the build lightweight for performance</li>
+        <li>HTML5 &amp; CSS3: semantic markup and hand-crafted styles</li>
+        <li>Vanilla JavaScript: for interactive UI elements</li>
+        <li>No frameworks: kept the build lightweight for performance</li>
       </ul>
 
       {/* Challenges */}
@@ -91,7 +91,7 @@ export default function DriveKGLCaseStudy() {
       {/* Outcomes */}
       <h2>Outcomes</h2>
       <div className="placeholder-note">
-        ✏️ <strong>Fill this in:</strong> Add any measurable results — e.g.,
+        ✏️ <strong>Fill this in:</strong> Add any measurable results, e.g.,
         &ldquo;The client reported a 3× increase in inquiries within the first month.&rdquo;
       </div>
 
@@ -100,7 +100,7 @@ export default function DriveKGLCaseStudy() {
       <p>
         Working with a real client sharpened my ability to translate business
         requirements into design decisions. I also deepened my appreciation for
-        performance budgets — Rwanda&apos;s mobile network conditions made image
+        performance budgets, Rwanda&apos;s mobile network conditions made image
         optimisation non-negotiable, not a nice-to-have.
       </p>
     </article>

@@ -6,7 +6,7 @@ import LightboxImage from "@/components/LightboxImage";
 export const metadata: Metadata = {
   title: "CBC-ALU Case Study | Bienvenu Cyuzuzo",
   description:
-    "How I initiated and led the development of the official website for the Claude Builder Club at ALU — Anthropic's campus AI community.",
+    "How I initiated and led the development of the official website for the Claude Builder Club at ALU, Anthropic's campus AI community.",
 };
 
 const META = [
@@ -121,7 +121,7 @@ export default function CbcAluCaseStudy() {
           The club has a presence on campuses globally. This is the site for the{" "}
           <a href="https://alueducation.com/" target="_blank" rel="noopener noreferrer"
             className={lnk}>ALU</a>{" "}
-          chapter — where I serve as a{" "}
+          chapter, where I serve as a{" "}
           <strong className="text-(--text)">Technical Advisor</strong>, supporting
           the ambassadors who run the club day-to-day.
         </p>
@@ -132,7 +132,7 @@ export default function CbcAluCaseStudy() {
         </h2>
         <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
           Up until this point, all club communication happened over email. Students
-          would receive event invites, session slides, and announcements — but emails
+          would receive event invites, session slides, and announcements, but emails
           get missed, buried, or ignored. There was no single place a student could
           go to catch up on what the club was doing or find resources from past events.
         </p>
@@ -173,11 +173,11 @@ export default function CbcAluCaseStudy() {
               width={720}
               height={420}
               className="w-full h-auto"
-              caption="Events page — slides and recaps attached per session"
+              caption="Events page: slides and recaps attached per session"
             />
           </div>
           <figcaption className="mt-2.5 text-center text-[0.8rem] text-(--text-subtle)">
-            Events page — slides and recaps attached per session
+            Events page: slides and recaps attached per session
           </figcaption>
         </figure>
 
@@ -190,11 +190,11 @@ export default function CbcAluCaseStudy() {
               width={720}
               height={420}
               className="w-full h-auto"
-              caption="Member builds — what students are building with Claude"
+              caption="Member builds: what students are building with Claude"
             />
           </div>
           <figcaption className="mt-2.5 text-center text-[0.8rem] text-(--text-subtle)">
-            Member builds — what students are building with Claude
+            Member builds: what students are building with Claude
           </figcaption>
         </figure>
 
@@ -207,11 +207,11 @@ export default function CbcAluCaseStudy() {
               width={720}
               height={420}
               className="w-full h-auto"
-              caption="Gallery page — photos from campus CBC events"
+              caption="Gallery page: photos from campus CBC events"
             />
           </div>
           <figcaption className="mt-2.5 text-center text-[0.8rem] text-(--text-subtle)">
-            Gallery page — photos from campus CBC events
+            Gallery page: photos from campus CBC events
           </figcaption>
         </figure>
 
@@ -220,12 +220,12 @@ export default function CbcAluCaseStudy() {
           Tech Stack
         </h2>
         <ul className="pl-6 mb-4 text-(--text-muted) list-disc">
-          <li className="mb-[0.4rem] leading-[1.7]">React &amp; TypeScript — component-based frontend</li>
-          <li className="mb-[0.4rem] leading-[1.7]">Tailwind CSS — utility-first styling</li>
-          <li className="mb-[0.4rem] leading-[1.7]">Vercel — deployment and hosting</li>
+          <li className="mb-[0.4rem] leading-[1.7]">React &amp; TypeScript: component-based frontend</li>
+          <li className="mb-[0.4rem] leading-[1.7]">Tailwind CSS: utility-first styling</li>
+          <li className="mb-[0.4rem] leading-[1.7]">Vercel: deployment and hosting</li>
         </ul>
         <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
-          The repo is public and open to contributions — other club members or advisors
+          The repo is public and open to contributions, so other club members or advisors
           can submit PRs to add new content, fix issues, or improve the site.
         </p>
 
@@ -235,14 +235,14 @@ export default function CbcAluCaseStudy() {
         </h2>
         <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
           Unlike the other projects in this portfolio, CBC-ALU is a live product
-          that I actively maintain. Every time the club runs an event — a workshop,
-          a demo night, a hackathon — there are new photos to push, new slides to
+          that I actively maintain. Every time the club runs an event (a workshop,
+          a demo night, a hackathon) there are new photos to push, new slides to
           attach, and new member builds to feature.
         </p>
         <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
           That ongoing responsibility has taught me something the other projects
           didn&apos;t: what it means to own a product after launch. Shipping is not the
-          end — it&apos;s the beginning of keeping it useful.
+          end. It&apos;s the beginning of keeping it useful.
         </p>
 
         {/* ── What I Learned ───────────────────────────────────── */}
@@ -256,7 +256,7 @@ export default function CbcAluCaseStudy() {
         </p>
         <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
           That changes how you work. When you own the decision to build something,
-          you think harder about whether it actually solves the problem — not just
+          you think harder about whether it actually solves the problem, not just
           whether it works technically.
         </p>
 

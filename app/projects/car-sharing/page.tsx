@@ -6,7 +6,7 @@ import LightboxImage from "@/components/LightboxImage";
 export const metadata: Metadata = {
   title: "Moni Share Case Study | Bienvenu Cyuzuzo",
   description:
-    "How I built a full-stack car sharing application at The Gym, Kigali — simulating enterprise team workflows across two structured sprints.",
+    "How I built a full-stack car sharing application at The Gym, Kigali, simulating enterprise team workflows across two structured sprints.",
 };
 
 const META = [
@@ -44,7 +44,7 @@ export default function MoniShareCaseStudy() {
           Moni Share
         </h1>
         <p className="text-(--text-muted) text-lg font-medium">
-          Car sharing platform —{" "}
+          Car sharing platform ·{" "}
           <a href="https://www.the-gym.rw/" target="_blank" rel="noopener noreferrer"
              className={lnk}>The Gym</a>
           , Kigali
@@ -97,7 +97,7 @@ export default function MoniShareCaseStudy() {
         vehicles and others can browse and book them.
       </p>
       <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
-        What made this project different wasn&apos;t just what we built — it was{" "}
+        What made this project different wasn&apos;t just what we built, it was{" "}
         <em>how</em> we built it. The entire project was structured to simulate
         enterprise team dynamics: Figma designs, Trello boards, daily standups,
         and a real code review pipeline. It was one of the most complete simulations
@@ -160,7 +160,7 @@ export default function MoniShareCaseStudy() {
       </div>
 
       <p className="text-(--text-muted) leading-[1.8] mt-5 mb-[0.9rem]">
-        The Senior Review was a live call — she would go through your code,
+        The Senior Review was a live call, she would go through your code,
         give feedback, and share insights from real production experience. That
         part was especially valuable.
       </p>
@@ -184,14 +184,14 @@ export default function MoniShareCaseStudy() {
           style={{ background: "var(--bg-card)", borderColor: "var(--border-card)" }}
         >
           <p className="text-sm font-bold text-(--text) mb-0.5">
-            Sprint 1 — Frontend
+            Sprint 1: Frontend
           </p>
           <p className="text-xs font-semibold text-(--accent) mb-2">
             Sept 29 – Nov 28, 2025
           </p>
           <p className="text-sm text-(--text-muted) leading-[1.6]">
             Build the full frontend from Figma designs, against a prepared Swagger API.
-            The backend already existed — our job was to consume it correctly and make
+            The backend already existed, our job was to consume it correctly and make
             the UI match the specs.
           </p>
         </div>
@@ -200,14 +200,14 @@ export default function MoniShareCaseStudy() {
           style={{ background: "var(--bg-card)", borderColor: "var(--border-card)" }}
         >
           <p className="text-sm font-bold text-(--text) mb-0.5">
-            Sprint 2 — Backend
+            Sprint 2: Backend
           </p>
           <p className="text-xs font-semibold text-(--accent) mb-2">
             Dec 19, 2025 – Feb 20, 2026
           </p>
           <p className="text-sm text-(--text-muted) leading-[1.6]">
             Build the NestJS backend ourselves. The same functionality the frontend
-            relied on — now we had to implement it. Same Trello workflow, same review
+            relied on, now we had to implement it. Same Trello workflow, same review
             pipeline.
           </p>
         </div>
@@ -237,11 +237,11 @@ export default function MoniShareCaseStudy() {
             width={720}
             height={420}
             className="w-full h-auto"
-            caption="Available cars — browse and filter listings"
+            caption="Available cars: browse and filter listings"
           />
         </div>
         <figcaption className="mt-2.5 text-center text-[0.8rem] text-(--text-subtle)">
-          Available cars — browse and filter listings
+          Available cars: browse and filter listings
         </figcaption>
       </figure>
 
@@ -270,11 +270,11 @@ export default function MoniShareCaseStudy() {
               width={360}
               height={300}
               className="w-full h-auto"
-              caption="My bookings — driver view"
+              caption="My bookings: driver view"
             />
           </div>
           <figcaption className="mt-2 text-center text-[0.75rem] text-(--text-subtle)">
-            My bookings — driver view
+            My bookings: driver view
           </figcaption>
         </figure>
       </div>
@@ -285,7 +285,7 @@ export default function MoniShareCaseStudy() {
       </h2>
       <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
         After the frontend was signed off, we switched to building the NestJS backend.
-        The codebase we were handed to work in was intentionally complex — designed
+        The codebase we were handed to work in was intentionally complex, designed
         to teach us what a production-grade backend actually looks like.
       </p>
       <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
@@ -302,11 +302,11 @@ export default function MoniShareCaseStudy() {
             width={720}
             height={420}
             className="w-full h-auto"
-            caption="Manage bookings — car owner view"
+            caption="Manage bookings: car owner view"
           />
         </div>
         <figcaption className="mt-2.5 text-center text-[0.8rem] text-(--text-subtle)">
-          Manage bookings — car owner view
+          Manage bookings: car owner view
         </figcaption>
       </figure>
 
@@ -315,7 +315,7 @@ export default function MoniShareCaseStudy() {
         The Architecture
       </h2>
       <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
-        The backend wasn&apos;t structured the way NestJS scaffolds it by default — one
+        The backend wasn&apos;t structured the way NestJS scaffolds it by default, one
         folder per feature with everything inside. Instead, it used a{" "}
         <strong className="text-(--text)">layered architecture</strong>: a persistence
         layer, a service/domain layer, a controller layer, and a presentation layer,
@@ -327,7 +327,7 @@ export default function MoniShareCaseStudy() {
            className={`font-semibold ${lnk}`}>MaibornWolff</a>{" "}
         (a German software company), recorded a walkthrough explaining the design
         decisions. We had to watch it and work through the structure before writing
-        a single line. It took time — but it gave me a much better mental model of
+        a single line. It took time, but it gave me a much better mental model of
         what &ldquo;enterprise backend&rdquo; actually means in practice.
       </p>
 
@@ -338,20 +338,20 @@ export default function MoniShareCaseStudy() {
       <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
         During the frontend sprint, we hit a bug where deleting a car from the listing
         wouldn&apos;t reflect in the UI without a full page refresh. We traced it back to a
-        race condition — the delete request would resolve but the list query would fetch
+        race condition: the delete request would resolve but the list query would fetch
         stale data before the backend had finished updating.
       </p>
       <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
         One teammate suggested{" "}
         <a href="https://tanstack.com/query" target="_blank" rel="noopener noreferrer"
            className={`font-semibold ${lnk}`}>TanStack Query</a>.
-        Its cache invalidation approach solved the problem cleanly — after a mutation,
+        Its cache invalidation approach solved the problem cleanly: after a mutation,
         you invalidate the relevant query and the UI updates automatically. I picked
         it up from that conversation, and it&apos;s been part of how I think about data
         fetching ever since.
       </p>
       <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
-        That&apos;s something team environments do that solo work doesn&apos;t — you pick up
+        That&apos;s something team environments do that solo work doesn&apos;t: you pick up
         tools and patterns through other people solving problems out loud.
       </p>
 
@@ -360,16 +360,16 @@ export default function MoniShareCaseStudy() {
         Tech Stack
       </h2>
       <ul className="pl-6 mb-4 text-(--text-muted) list-disc">
-        <li className="mb-[0.4rem] leading-[1.7]">React &amp; TypeScript — component-based frontend</li>
+        <li className="mb-[0.4rem] leading-[1.7]">React &amp; TypeScript: component-based frontend</li>
         <li className="mb-[0.4rem] leading-[1.7]">
           <a href="https://tanstack.com/query" target="_blank" rel="noopener noreferrer"
-             className={lnk}>TanStack Query</a>{" "}
-          — server state management &amp; cache invalidation
+             className={lnk}>TanStack Query</a>:{" "}
+          server state management &amp; cache invalidation
         </li>
-        <li className="mb-[0.4rem] leading-[1.7]">NestJS — layered backend architecture</li>
-        <li className="mb-[0.4rem] leading-[1.7]">PostgreSQL — relational database</li>
-        <li className="mb-[0.4rem] leading-[1.7]">Docker — containerized services</li>
-        <li className="mb-[0.4rem] leading-[1.7]">Git &amp; GitHub — version control and peer review</li>
+        <li className="mb-[0.4rem] leading-[1.7]">NestJS: layered backend architecture</li>
+        <li className="mb-[0.4rem] leading-[1.7]">PostgreSQL: relational database</li>
+        <li className="mb-[0.4rem] leading-[1.7]">Docker: containerized services</li>
+        <li className="mb-[0.4rem] leading-[1.7]">Git &amp; GitHub: version control and peer review</li>
       </ul>
 
       {/* ── What I Learned ───────────────────────────────────── */}
@@ -379,7 +379,7 @@ export default function MoniShareCaseStudy() {
       <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
         Moni Share was the closest thing to a real job I&apos;d experienced before
         actually having one. The Trello workflow, standups, and review pipeline weren&apos;t
-        just process for its own sake — they existed because software built by teams
+        just process for its own sake: they existed because software built by teams
         without structure tends to fall apart.
       </p>
       <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">

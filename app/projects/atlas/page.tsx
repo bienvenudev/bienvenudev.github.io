@@ -6,7 +6,7 @@ import LightboxImage from "@/components/LightboxImage";
 export const metadata: Metadata = {
   title: "Atlas Case Study | Bienvenu Cyuzuzo",
   description:
-    "How my team built Atlas — a diaspora mentorship platform — and placed 2nd at the Code2Unlock Hackathon 2025 in Kigali.",
+    "How my team built Atlas, a diaspora mentorship platform, and placed 2nd at the Code2Unlock Hackathon 2025 in Kigali.",
 };
 
 const META = [
@@ -29,7 +29,7 @@ const TIMELINE = [
   },
   {
     date: "Sept 11",
-    label: "Selection Day — The Gate",
+    label: "Selection Day: The Gate",
     detail: "First pitch and prototype. 7 of 32 teams selected to continue. We made the cut.",
     highlight: true,
   },
@@ -70,7 +70,7 @@ export default function AtlasCaseStudy() {
           Atlas
         </h1>
         <p className="text-(--text-muted) text-lg font-medium">
-          Diaspora mentorship platform — Kigali, Rwanda
+          Diaspora mentorship platform · Kigali, Rwanda
         </p>
         <div className="flex justify-center gap-5 mt-5">
           <a
@@ -91,7 +91,7 @@ export default function AtlasCaseStudy() {
           </a>
           </div>
           <p className="text-sm text-(--text-muted) mt-2">
-            No sign-up needed — the demo lets you explore as a pre-filled user.
+            No sign-up needed: the demo lets you explore as a pre-filled user.
           </p>
       </div>
 
@@ -133,8 +133,8 @@ export default function AtlasCaseStudy() {
       <p className="text-(--text-muted) leading-[1.8] mb-4">
         We were one of 32 teams that participated in the{" "}
         <a href="https://code2unlock.org/" target="_blank" rel="noopener noreferrer"
-           className={`font-bold ${lnk}`}>Code2Unlock Hackathon</a>{" "}
-        — a multi-week sprint run by{" "}
+           className={`font-bold ${lnk}`}>Code2Unlock Hackathon</a>,{" "}
+        a multi-week sprint run by{" "}
         <a href="https://code2unlock.org/" target="_blank" rel="noopener noreferrer"
            className={lnk}>Code2Unlock Skills &amp; Jobs</a>{" "}
         in Kigali. Our team picked up{" "}
@@ -175,7 +175,7 @@ export default function AtlasCaseStudy() {
       <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
         Many educated Rwandan youth lack mentorship, global perspectives, and career
         readiness tools. At the same time, the diaspora holds valuable expertise and
-        networks — and a genuine eagerness to contribute to national development —
+        networks, and a genuine eagerness to contribute to national development,
         but this resource is unstructured and untapped.
       </p>
       <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
@@ -217,7 +217,7 @@ export default function AtlasCaseStudy() {
               <div className="pb-1">
                 <p className="text-sm font-bold text-(--text)">
                   {date}{" "}
-                  <span className="text-(--accent) font-semibold">— {label}</span>
+                  <span className="text-(--accent) font-semibold">· {label}</span>
                 </p>
                 <p className="text-sm text-(--text-muted) mt-0.5 leading-[1.6]">
                   {detail}
@@ -237,11 +237,11 @@ export default function AtlasCaseStudy() {
             width={720}
             height={480}
             className="w-full h-auto"
-            caption="Crunch Week — with our Dutch mentors at The Gym, Kigali"
+            caption="Crunch Week with our Dutch mentors at The Gym, Kigali"
           />
         </div>
         <figcaption className="mt-2.5 text-center text-[0.8rem] text-(--text-subtle)">
-          Crunch Week — with our Dutch mentors at{" "}
+          Crunch Week with our Dutch mentors at{" "}
           <a href="https://www.the-gym.rw/" target="_blank" rel="noopener noreferrer"
              className={lnk}>The Gym</a>
           , Kigali
@@ -254,7 +254,7 @@ export default function AtlasCaseStudy() {
       </h2>
       <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
         I was the frontend developer on a team of four. My focus was building and
-        polishing the user interface — translating the product vision into screens
+        polishing the user interface, translating the product vision into screens
         that felt intuitive and trustworthy enough to pitch to a panel of judges
         under pressure.
       </p>
@@ -280,11 +280,11 @@ export default function AtlasCaseStudy() {
             width={720}
             height={400}
             className="w-full h-auto"
-            caption="Mentor discovery — browse and connect with diaspora professionals"
+            caption="Mentor discovery: browse and connect with diaspora professionals"
           />
         </div>
         <figcaption className="mt-2.5 text-center text-[0.8rem] text-(--text-subtle)">
-          Mentor discovery — browse and connect with diaspora professionals
+          Mentor discovery: browse and connect with diaspora professionals
         </figcaption>
       </figure>
 
@@ -293,10 +293,10 @@ export default function AtlasCaseStudy() {
         Tech Stack
       </h2>
       <ul className="pl-6 mb-4 text-(--text-muted) list-disc">
-        <li className="mb-[0.4rem] leading-[1.7]">React &amp; TypeScript — component-based frontend</li>
-        <li className="mb-[0.4rem] leading-[1.7]">Tailwind CSS — utility-first styling</li>
-        <li className="mb-[0.4rem] leading-[1.7]">Prisma — backend ORM (handled by teammates)</li>
-        <li className="mb-[0.4rem] leading-[1.7]">Supabase — database &amp; auth on the full version</li>
+        <li className="mb-[0.4rem] leading-[1.7]">React &amp; TypeScript: component-based frontend</li>
+        <li className="mb-[0.4rem] leading-[1.7]">Tailwind CSS: utility-first styling</li>
+        <li className="mb-[0.4rem] leading-[1.7]">Prisma: backend ORM (handled by teammates)</li>
+        <li className="mb-[0.4rem] leading-[1.7]">Supabase: database &amp; auth on the full version</li>
       </ul>
 
       {/* ── The Result ───────────────────────────────────────── */}
@@ -304,7 +304,7 @@ export default function AtlasCaseStudy() {
         The Result
       </h2>
       <p className="text-(--text-muted) leading-[1.8] mb-6">
-        On September 19th — Graduation Day — we pitched Atlas to a panel of judges
+        On September 19th (Graduation Day) we pitched Atlas to a panel of judges
         and challenge owners at{" "}
         <a href="https://www.the-gym.rw/" target="_blank" rel="noopener noreferrer"
            className={lnk}>The Gym</a>
@@ -337,11 +337,11 @@ export default function AtlasCaseStudy() {
               width={360}
               height={220}
               className="w-full h-full object-cover max-[500px]:h-auto max-[500px]:object-contain"
-              caption="Receiving 2nd place — Code2Unlock 2025"
+              caption="Receiving 2nd place at Code2Unlock 2025"
             />
           </div>
           <figcaption className="mt-2 text-center text-[0.75rem] text-(--text-subtle)">
-            Receiving 2nd place —{" "}
+            Receiving 2nd place at{" "}
             <a href="https://code2unlock.org/" target="_blank" rel="noopener noreferrer"
                className={lnk}>Code2Unlock 2025</a>
           </figcaption>
@@ -367,7 +367,7 @@ export default function AtlasCaseStudy() {
         >
           atlasc2u.vercel.app
         </a>{" "}
-        is a demo version pre-filled with mock data — enough to explore the
+        is a demo version pre-filled with mock data, enough to explore the
         concept and flows, but features like messaging and session booking are
         intentionally non-functional. It&apos;s a prototype, preserved as a record
         of what we built and presented.
@@ -379,14 +379,14 @@ export default function AtlasCaseStudy() {
       </h2>
       <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
         Building Atlas was the first time I worked on a product with a genuinely
-        meaningful mission — not just a technical exercise. That changes how you
+        meaningful mission, not just a technical exercise. That changes how you
         make decisions. You start asking &ldquo;does this flow feel trustworthy?&rdquo;
         rather than just &ldquo;does this code work?&rdquo;
       </p>
       <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
         The multi-week format also taught me that real product work is iterative.
         The prototype we pitched on Sept 19th was meaningfully different from what
-        we had on Sept 11th — not because we added features, but because we kept
+        we had on Sept 11th, not because we added features, but because we kept
         refining until it felt right.
       </p>
 

@@ -6,7 +6,7 @@ import LightboxImage from "@/components/LightboxImage";
 export const metadata: Metadata = {
   title: "PlanetMatrix Case Study | Bienvenu Cyuzuzo",
   description:
-    "How I designed and built the marketing site for PlanetMatrix, an AI-powered ESG & climate intelligence platform — from a blank canvas to a deployed, email-wired product.",
+    "How I designed and built the marketing site for PlanetMatrix, an AI-powered ESG & climate intelligence platform, from a blank canvas to a deployed, email-wired product.",
 };
 
 const META = [
@@ -42,7 +42,7 @@ export default function PlanetMatrixCaseStudy() {
           PlanetMatrix
         </h1>
         <p className="text-(--text-muted) text-lg font-medium">
-          ESG &amp; climate intelligence platform — design &amp; build
+          ESG &amp; climate intelligence platform · design &amp; build
         </p>
         {LIVE_URL ? (
           <a
@@ -61,7 +61,7 @@ export default function PlanetMatrixCaseStudy() {
         )}
       </div>
 
-      {/* ── Hero screenshot — bleeds wider than the prose column ─ */}
+      {/* ── Hero screenshot, bleeds wider than the prose column ─ */}
       <div
         className="rounded-2xl overflow-hidden border border-(--border-card) mb-10"
         style={{
@@ -71,11 +71,11 @@ export default function PlanetMatrixCaseStudy() {
       >
         <LightboxImage
           src="/images/projects/planet-matrix/hero.png"
-          alt="PlanetMatrix landing page hero — One Platform. All Your ESG. Infinite Impact."
+          alt="PlanetMatrix landing page hero: One Platform. All Your ESG. Infinite Impact."
           width={1100}
           height={620}
           className="w-full h-auto"
-          caption="The hero — One Platform. All Your ESG. Infinite Impact."
+          caption="The hero: One Platform. All Your ESG. Infinite Impact."
           priority
         />
       </div>
@@ -98,7 +98,7 @@ export default function PlanetMatrixCaseStudy() {
       </h2>
       <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
         PlanetMatrix is a climate-tech startup building an ESG (Environmental,
-        Social, Governance) platform — an AI-powered tool that helps industries,
+        Social, Governance) platform, an AI-powered tool that helps industries,
         farms, and factories monitor water, energy, and carbon data and stay
         compliant with international sustainability frameworks. They reached out
         with a tight brief: they needed a credible, production-ready marketing
@@ -106,8 +106,8 @@ export default function PlanetMatrixCaseStudy() {
       </p>
       <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
         The catch was that there was nothing to build from. No Figma file, no
-        brand guidelines beyond a one-page pitch document, no component library —
-        just a concept, a content direction, and a blank canvas. I&apos;d be doing
+        brand guidelines beyond a one-page pitch document, no component library.
+        Just a concept, a content direction, and a blank canvas. I&apos;d be doing
         both the design and the engineering myself.
       </p>
 
@@ -116,8 +116,8 @@ export default function PlanetMatrixCaseStudy() {
         The Problem
       </h2>
       <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
-        ESG platforms live or die on trust. The audience — sustainability leads,
-        compliance officers, industrial operators — needs to believe the product
+        ESG platforms live or die on trust. The audience (sustainability leads,
+        compliance officers, industrial operators) needs to believe the product
         is serious, accurate, and audit-ready before they&apos;ll book a demo. That
         meant the site couldn&apos;t just <em>look</em> nice; it had to communicate
         technical credibility: real-feeling dashboards, real frameworks, a clear
@@ -127,7 +127,7 @@ export default function PlanetMatrixCaseStudy() {
         But I had no designer to hand me a polished mockup, and no pre-built
         dashboard screenshots that matched the dark, technical aesthetic the
         product needed. I had to invent the visual language and build it at the
-        same time — under deadline.
+        same time, under deadline.
       </p>
 
       {/* ── My Role ──────────────────────────────────────────── */}
@@ -136,11 +136,11 @@ export default function PlanetMatrixCaseStudy() {
       </h2>
       <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
         I&apos;ve built solo for clients before, but on PlanetMatrix I owned the{" "}
-        <em>design</em> end to end alongside the engineering — starting from a
-        blank canvas instead of a handed-off mockup. Every decision — colour
-        palette, typography, logo treatment, component layout, <em>and</em> the
-        code that implemented it — was mine. If a section didn&apos;t feel
-        trustworthy, there was no one to blame and no one to fix it but me.
+        <em>design</em> end to end alongside the engineering, starting from a
+        blank canvas instead of a handed-off mockup. Every decision was mine:
+        colour palette, typography, logo treatment, component layout, <em>and</em>{" "}
+        the code that implemented it. If a section didn&apos;t feel trustworthy,
+        there was no one to blame and no one to fix it but me.
       </p>
 
       {/* ── What I Built ─────────────────────────────────────── */}
@@ -149,7 +149,7 @@ export default function PlanetMatrixCaseStudy() {
       </h2>
       <ul className="pl-6 mb-4 text-(--text-muted) list-disc">
         <li className="mb-[0.4rem] leading-[1.7]">A full single-page marketing site with fixed navigation, an animated hero, and smooth-scroll sections</li>
-        <li className="mb-[0.4rem] leading-[1.7]">An interactive &ldquo;How It Works&rdquo; section with four tabbed panels — Collect → Analyze → Act → Report — each with its own custom dashboard visualization</li>
+        <li className="mb-[0.4rem] leading-[1.7]">An interactive &ldquo;How It Works&rdquo; section with four tabbed panels (Collect → Analyze → Act → Report), each with its own custom dashboard visualization</li>
         <li className="mb-[0.4rem] leading-[1.7]">Four bespoke dark-themed dashboards: a live data-source table, an AI risk-analysis panel, a geographic intelligence map, and a compliance reporting view</li>
         <li className="mb-[0.4rem] leading-[1.7]">A capabilities grid, a three-step compliance journey, a frameworks section, and an impact-pillars layout</li>
         <li className="mb-[0.4rem] leading-[1.7]">A fully functional &ldquo;Book a Demo&rdquo; form wired to a real email-delivery backend</li>
@@ -161,79 +161,79 @@ export default function PlanetMatrixCaseStudy() {
         The Dashboards
       </h2>
       <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
-        The dashboards were the heart of the site — and the most time-consuming
+        The dashboards were the heart of the site, and the most time-consuming
         piece. Generic placeholder charts looked fake, so instead of decoration I
         designed four screens that actually reflect the product&apos;s domain, one for
         each step of the &ldquo;How It Works&rdquo; flow. They&apos;re visualizations built into the
-        landing page itself rather than a live app — a preview of what the actual
-        product will do — but the goal was for them to read as the real thing.
+        landing page itself rather than a live app (a preview of what the actual
+        product will do), but the goal was for them to read as the real thing.
       </p>
 
-      {/* Collect — full width */}
+      {/* Collect, full width */}
       <figure className="my-10">
         <div className="rounded-xl overflow-hidden border border-(--border-card)">
           <LightboxImage
             src="/images/projects/planet-matrix/collect-dashboard.png"
-            alt="Collect dashboard — live data sources table"
+            alt="Collect dashboard: live data sources table"
             width={1100}
             height={620}
             className="w-full h-auto"
-            caption="Collect — a live data-source table pulling from water sensors, energy grids, supply chain, and a climate API, with per-source status"
+            caption="Collect: a live data-source table pulling from water sensors, energy grids, supply chain, and a climate API, with per-source status"
           />
         </div>
         <figcaption className="mt-2.5 text-center text-[0.8rem] text-(--text-subtle)">
-          Collect — a live data-source table with per-source status
+          Collect: a live data-source table with per-source status
         </figcaption>
       </figure>
 
-      {/* Analyze + Act — 2-col */}
+      {/* Analyze + Act, 2-col */}
       <div className="grid grid-cols-2 gap-3 my-8 max-[500px]:grid-cols-1">
         <figure>
           <div className="rounded-xl overflow-hidden border border-(--border-card)">
             <LightboxImage
               src="/images/projects/planet-matrix/analyze-dashboard.png"
-              alt="Analyze dashboard — AI risk analysis panel"
+              alt="Analyze dashboard: AI risk analysis panel"
               width={540}
               height={340}
               className="w-full h-auto"
-              caption="Analyze — ESG score, exposure trend, and AI anomaly detection"
+              caption="Analyze: ESG score, exposure trend, and AI anomaly detection"
             />
           </div>
           <figcaption className="mt-2 text-center text-[0.75rem] text-(--text-subtle)">
-            Analyze — ESG score &amp; AI anomaly detection
+            Analyze: ESG score &amp; AI anomaly detection
           </figcaption>
         </figure>
         <figure>
           <div className="rounded-xl overflow-hidden border border-(--border-card)">
             <LightboxImage
               src="/images/projects/planet-matrix/act-dashboard.png"
-              alt="Act dashboard — geographic intelligence map and recommended actions"
+              alt="Act dashboard: geographic intelligence map and recommended actions"
               width={540}
               height={340}
               className="w-full h-auto"
-              caption="Act — geographic intelligence map with recommended actions and live alerts"
+              caption="Act: geographic intelligence map with recommended actions and live alerts"
             />
           </div>
           <figcaption className="mt-2 text-center text-[0.75rem] text-(--text-subtle)">
-            Act — geographic intelligence &amp; recommended actions
+            Act: geographic intelligence &amp; recommended actions
           </figcaption>
         </figure>
       </div>
 
-      {/* Report — full width */}
+      {/* Report, full width */}
       <figure className="my-10">
         <div className="rounded-xl overflow-hidden border border-(--border-card)">
           <LightboxImage
             src="/images/projects/planet-matrix/report-dashboard.png"
-            alt="Report dashboard — compliance reporting view"
+            alt="Report dashboard: compliance reporting view"
             width={1100}
             height={620}
             className="w-full h-auto"
-            caption="Report — carbon footprint, emissions over time, and framework-completion progress across CSRD, PCAF, SFDR, and GRI"
+            caption="Report: carbon footprint, emissions over time, and framework-completion progress across CSRD, PCAF, SFDR, and GRI"
           />
         </div>
         <figcaption className="mt-2.5 text-center text-[0.8rem] text-(--text-subtle)">
-          Report — compliance progress across CSRD, PCAF, SFDR &amp; GRI
+          Report: compliance progress across CSRD, PCAF, SFDR &amp; GRI
         </figcaption>
       </figure>
 
@@ -245,7 +245,7 @@ export default function PlanetMatrixCaseStudy() {
       <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
         <strong className="text-(--text)">Designing without a designer.</strong>{" "}
         I leaned on AI design tooling to explore directions fast, then refined the
-        output into a coherent system — a deep-purple-on-near-black palette, a
+        output into a coherent system: a deep-purple-on-near-black palette, a
         custom dotted-globe logo mark, and a consistent card language. The
         dashboards were where this mattered most: each one had to map to a real
         slice of the domain, like water-leakage risk, scope emissions, and
@@ -275,7 +275,7 @@ export default function PlanetMatrixCaseStudy() {
         Next.js API route to handle submissions. The recurring gotcha: environment
         variables only take effect on <em>new</em> deployments, so the form kept
         failing in production until I learned to always redeploy after touching
-        secrets — and to read the API&apos;s JSON error response instead of guessing.
+        secrets, and to read the API&apos;s JSON error response instead of guessing.
       </p>
 
       {/* Demo form screenshot */}
@@ -287,18 +287,18 @@ export default function PlanetMatrixCaseStudy() {
             width={1100}
             height={620}
             className="w-full h-auto"
-            caption="The Book a Demo form — wired to a real transactional-email backend on a verified domain"
+            caption="The Book a Demo form, wired to a real transactional-email backend on a verified domain"
           />
         </div>
         <figcaption className="mt-2.5 text-center text-[0.8rem] text-(--text-subtle)">
-          The &ldquo;Book a Demo&rdquo; form — wired to a verified-domain email backend
+          The &ldquo;Book a Demo&rdquo; form, wired to a verified-domain email backend
         </figcaption>
       </figure>
 
       <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
         <strong className="text-(--text)">Deployment &amp; DNS.</strong>{" "}
         Connecting a custom domain meant coordinating between a domain registrar
-        and the hosting platform — A records, CNAMEs, verification TXT records, and
+        and the hosting platform: A records, CNAMEs, verification TXT records, and
         the occasional propagation wait. I also had to migrate the whole project
         between hosting accounts cleanly, re-pointing the domain without downtime.
       </p>
@@ -308,14 +308,14 @@ export default function PlanetMatrixCaseStudy() {
         Tech Stack
       </h2>
       <ul className="pl-6 mb-4 text-(--text-muted) list-disc">
-        <li className="mb-[0.4rem] leading-[1.7]">Next.js &amp; TypeScript — App Router, API routes, server-rendered marketing pages</li>
-        <li className="mb-[0.4rem] leading-[1.7]">Tailwind CSS v4 — utility-first styling with custom CSS-variable design tokens</li>
+        <li className="mb-[0.4rem] leading-[1.7]">Next.js &amp; TypeScript: App Router, API routes, server-rendered marketing pages</li>
+        <li className="mb-[0.4rem] leading-[1.7]">Tailwind CSS v4: utility-first styling with custom CSS-variable design tokens</li>
         <li className="mb-[0.4rem] leading-[1.7]">
           <a href="https://resend.com/" target="_blank" rel="noopener noreferrer"
-             className={lnk}>Resend</a>{" "}
-          — transactional email delivery from a verified domain
+             className={lnk}>Resend</a>:{" "}
+          transactional email delivery from a verified domain
         </li>
-        <li className="mb-[0.4rem] leading-[1.7]">Vercel — hosting, environment management, and deployment pipeline</li>
+        <li className="mb-[0.4rem] leading-[1.7]">Vercel: hosting, environment management, and deployment pipeline</li>
       </ul>
 
       {/* ── What I Learned ───────────────────────────────────── */}
@@ -324,13 +324,13 @@ export default function PlanetMatrixCaseStudy() {
       </h2>
       <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
         The biggest shift was realizing how much design <em>is</em> engineering when
-        you&apos;re solo. I couldn&apos;t hide behind &ldquo;the mockup said so&rdquo; — every spacing
+        you&apos;re solo. I couldn&apos;t hide behind &ldquo;the mockup said so.&rdquo; Every spacing
         choice, every contrast decision, every &ldquo;does this dashboard look real enough
         to trust&rdquo; judgment was mine to own. It made me a more deliberate developer.
       </p>
       <p className="text-(--text-muted) leading-[1.8] mb-[0.9rem]">
-        I also learned that the unglamorous infrastructure work — DNS records, env
-        vars, redeploys, domain verification — is where projects actually get stuck.
+        I also learned that the unglamorous infrastructure work (DNS records, env
+        vars, redeploys, domain verification) is where projects actually get stuck.
         Writing the UI was the fun part; getting email to send reliably from a custom
         domain in production taught me more about how the web actually fits together
         than any component ever did.

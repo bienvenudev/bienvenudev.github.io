@@ -27,7 +27,7 @@ export default function Impact1000CaseStudy() {
         </div>
         <p>
           A promotional website for the Impact 1000 Africa Initiative by
-          Pulsepedia Group — a programme designed to train and empower 1,000
+          Pulsepedia Group, a programme designed to train and empower 1,000
           businesses across the African continent.
         </p>
         <a
@@ -55,8 +55,8 @@ export default function Impact1000CaseStudy() {
       <p>
         The initiative was launching and needed a web presence that could quickly
         build awareness and drive applications from eligible businesses across
-        Africa. The page had to work across a diverse audience — different
-        countries, device types, and internet connection speeds — while
+        Africa. The page had to work across a diverse audience (different
+        countries, device types, and internet connection speeds) while
         maintaining a compelling, aspirational tone.
       </p>
 
@@ -81,8 +81,8 @@ export default function Impact1000CaseStudy() {
       {/* Tech stack */}
       <h2>Tech Stack</h2>
       <ul>
-        <li>HTML5 &amp; CSS3 — semantic structure and styling</li>
-        <li>JavaScript — interactive UI components</li>
+        <li>HTML5 &amp; CSS3: semantic structure and styling</li>
+        <li>JavaScript: interactive UI components</li>
         <li>Integration with existing CMS / site structure</li>
       </ul>
 
@@ -107,7 +107,7 @@ export default function Impact1000CaseStudy() {
       <h2>What I Learned</h2>
       <p>
         Building for a pan-African audience reinforced how important it is to
-        design with real-world constraints in mind — not the fast fibre
+        design with real-world constraints in mind, not the fast fibre
         connection at your desk. I also gained experience working within an
         existing brand system and understanding how a landing page fits into a
         larger marketing funnel.

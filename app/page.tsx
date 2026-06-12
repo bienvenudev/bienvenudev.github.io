@@ -35,12 +35,12 @@ const PROJECTS = [
   },
   {
     num: "02",
-    name: "Wasemac",
-    desc: "Corporate website for a water & sewage engineering firm in Rwanda.",
-    tags: ["HTML", "CSS", "JavaScript"],
-    live: "https://wasemacltd.com/",
-    slug: "wasemac",
-    gradient: "linear-gradient(135deg, #042f2e 0%, #0d9488 100%)",
+    name: "CBC-ALU",
+    desc: "Official site for the Claude Builder Club at ALU: events, gallery, slides, and resources for the campus AI community.",
+    tags: ["React", "TypeScript", "Tailwind"],
+    live: "https://cbc-alu.tech/",
+    slug: "cbc-alu",
+    gradient: "linear-gradient(135deg, #431407 0%, #c2410c 100%)",
   },
   {
     num: "03",
@@ -62,12 +62,12 @@ const PROJECTS = [
   },
   {
     num: "05",
-    name: "CBC-ALU",
-    desc: "Official site for the Claude Builder Club at ALU: events, gallery, slides, and resources for the campus AI community.",
-    tags: ["React", "TypeScript", "Tailwind"],
-    live: "https://cbc-alu.tech/",
-    slug: "cbc-alu",
-    gradient: "linear-gradient(135deg, #431407 0%, #c2410c 100%)",
+    name: "Wasemac",
+    desc: "Corporate website for a water & sewage engineering firm in Rwanda.",
+    tags: ["HTML", "CSS", "JavaScript"],
+    live: "https://wasemacltd.com/",
+    slug: "wasemac",
+    gradient: "linear-gradient(135deg, #042f2e 0%, #0d9488 100%)",
   },
 ];
 

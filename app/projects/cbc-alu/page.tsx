@@ -44,7 +44,7 @@ export default function CbcAluCaseStudy() {
           </p>
           <div className="flex justify-center gap-5 mt-5">
             <a
-              href="https://cbc-alu.vercel.app/"
+              href="https://cbc-alu.tech/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm font-semibold text-(--accent) hover:underline no-underline"

@@ -36,7 +36,7 @@ const TIMELINE = [
   {
     date: "Sept 14–18",
     label: "Crunch Week",
-    detail: "Masterclasses, review sessions, and hands-on guidance from Dutch mentors. Refine the code, perfect the pitch.",
+    detail: "Masterclasses, review sessions, and hands-on guidance from mentors. Refine the code, perfect the pitch.",
   },
   {
     date: "Sept 19",
@@ -233,15 +233,15 @@ export default function AtlasCaseStudy() {
         <div className="rounded-xl overflow-hidden border border-(--border-card)">
           <LightboxImage
             src="/images/projects/atlas/with-coaches.jpg"
-            alt="With Dutch mentors during Crunch Week"
+            alt="With mentors during Crunch Week"
             width={720}
             height={480}
             className="w-full h-auto"
-            caption="Crunch Week with our Dutch mentors at The Gym, Kigali"
+            caption="Crunch Week with our mentors at The Gym, Kigali"
           />
         </div>
         <figcaption className="mt-2.5 text-center text-[0.8rem] text-(--text-subtle)">
-          Crunch Week with our Dutch mentors at{" "}
+          Crunch Week with our mentors at{" "}
           <a href="https://www.the-gym.rw/" target="_blank" rel="noopener noreferrer"
              className={lnk}>The Gym</a>
           , Kigali

@@ -85,13 +85,13 @@ export default function Home() {
           <div className="flex flex-col gap-5 max-w-140 max-md:items-center max-md:order-2 max-md:max-w-full">
 
             {/* Status badge */}
-            <span className="inline-flex items-center gap-2 text-[0.82rem] font-medium text-(--text-muted) bg-(--bg-card) border border-(--border-card) px-3 py-1.5 rounded-full w-fit tracking-[0.01em]">
+            {/* <span className="inline-flex items-center gap-2 text-[0.82rem] font-medium text-(--text-muted) bg-(--bg-card) border border-(--border-card) px-3 py-1.5 rounded-full w-fit tracking-[0.01em]">
               <span
                 className="w-1.75 h-1.75 rounded-full bg-green-500 shadow-[0_0_6px_#22c55e] shrink-0"
                 aria-hidden="true"
               />
               Available for work
-            </span>
+            </span> */}
 
             {/* Heading */}
             <h1 className="text-(length:--text-hero) font-black tracking-[-0.04em] leading-[1.05] text-(--text)">
@@ -135,7 +135,7 @@ export default function Home() {
                            hover:border-(--accent) hover:-translate-x-1.5 hover:-translate-y-1.5 hover:shadow-[6px_6px_0_0_var(--accent)]
                            max-md:w-45 max-md:h-45">
               <Image
-                src="/images/bienvenu-bw.jpg"
+                src="/images/bienvenu.jpg"
                 alt="Bienvenu Cyuzuzo"
                 fill
                 sizes="358px"
